@@ -1,0 +1,20 @@
+{
+  "topup": [
+    "voucher_top_up_button_clicked", "voucher_top_up_success", "voucher_top_up_failed",
+    "go_pay_top_up_clicked", "go_pay_top_up_user_redirected", "go_pay_top_up_success", "go_pay_top_up_failure",
+    "alfamart_top_up_clicked", "alfamart_top_up_success", "alfamart_top_up_failed",
+    "bank_top_up_clicked", "topup_above_100usd", "topup_amount_input", "topup_success",
+    "topup_x", "topup_manual_confirm", "topup_cancel", "topup_channel_select",
+    "topup_click_home", "topup_confirm", "topup_method_clicked", "RDN_top_up"
+  ],
+  "cashout": [
+    "bank_cash_out_started", "gopay_cash_out_started", "bank_cash_out_success",
+    "bank_cash_out_failure", "gopay_cash_out_success", "gopay_cash_out_failure",
+    "cashout_failed", "cashout_swiped", "cashout_method_clicked", "RDN_cash_out"
+  ],
+  "crypto_send_receive": [
+    "splash_try_again_viewed", "sign_out_success", "auth_entry_clicked",
+    "auth_setup_clicked", "auth_verify_clicked", "auth_setup_success",
+    "auth_disable_clicked", "auth_disable_success"
+  ]
+}

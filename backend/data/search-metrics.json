@@ -1,0 +1,427 @@
+{
+  "totalSearches": 44233,
+  "sfSearches": 26436,
+  "ragSearches": 32972,
+  "channelBreakdown": {
+    "Public Knowledge Base": 19956,
+    "Internal App": 24277
+  },
+  "zeroResultRate": 81.6,
+  "topSearchTerms": [
+    {
+      "term": "top up",
+      "termEN": "Loading...",
+      "count": 479,
+      "clicked": 93,
+      "total": 105,
+      "clickRate": 88.6
+    },
+    {
+      "term": "emas",
+      "termEN": "Loading...",
+      "count": 456,
+      "clicked": 78,
+      "total": 86,
+      "clickRate": 90.7
+    },
+    {
+      "term": "saham as",
+      "termEN": "US shares",
+      "count": 328,
+      "clicked": 78,
+      "total": 85,
+      "clickRate": 91.8
+    },
+    {
+      "term": "pajak",
+      "termEN": "Loading...",
+      "count": 283,
+      "clicked": 52,
+      "total": 65,
+      "clickRate": 80
+    },
+    {
+      "term": "biaya",
+      "termEN": "cost",
+      "count": 282,
+      "clicked": 77,
+      "total": 85,
+      "clickRate": 90.6
+    },
+    {
+      "term": "kripto",
+      "termEN": "Loading...",
+      "count": 233,
+      "clicked": 69,
+      "total": 76,
+      "clickRate": 90.8
+    },
+    {
+      "term": "hapus akun",
+      "termEN": "Loading...",
+      "count": 225,
+      "clicked": 12,
+      "total": 71,
+      "clickRate": 16.9
+    },
+    {
+      "term": "penarikan dana",
+      "termEN": "Loading...",
+      "count": 220,
+      "clicked": 85,
+      "total": 92,
+      "clickRate": 92.4
+    },
+    {
+      "term": "pocket",
+      "termEN": "pocket",
+      "count": 216,
+      "clicked": 53,
+      "total": 60,
+      "clickRate": 88.3
+    },
+    {
+      "term": "transfer kripto",
+      "termEN": "Loading...",
+      "count": 183,
+      "clicked": 67,
+      "total": 71,
+      "clickRate": 94.4
+    },
+    {
+      "term": "leverage",
+      "termEN": "leverage",
+      "count": 179,
+      "clicked": 31,
+      "total": 43,
+      "clickRate": 72.1
+    },
+    {
+      "term": "futures",
+      "termEN": "Loading...",
+      "count": 168,
+      "clicked": 53,
+      "total": 57,
+      "clickRate": 93
+    },
+    {
+      "term": "harga emas",
+      "termEN": "gold price",
+      "count": 166,
+      "clicked": 35,
+      "total": 44,
+      "clickRate": 79.5
+    },
+    {
+      "term": "390499",
+      "termEN": "390499",
+      "count": 165,
+      "clicked": 0,
+      "total": 36,
+      "clickRate": 0
+    },
+    {
+      "term": "pluang cuan",
+      "termEN": "Loading...",
+      "count": 149,
+      "clicked": 34,
+      "total": 44,
+      "clickRate": 77.3
+    },
+    {
+      "term": "options",
+      "termEN": "options",
+      "count": 149,
+      "clicked": 30,
+      "total": 44,
+      "clickRate": 68.2
+    },
+    {
+      "term": "dividen",
+      "termEN": "Loading...",
+      "count": 142,
+      "clicked": 51,
+      "total": 61,
+      "clickRate": 83.6
+    },
+    {
+      "term": "reksadana",
+      "termEN": "Loading...",
+      "count": 135,
+      "clicked": 35,
+      "total": 51,
+      "clickRate": 68.6
+    },
+    {
+      "term": "autentikator",
+      "termEN": "Loading...",
+      "count": 134,
+      "clicked": 45,
+      "total": 58,
+      "clickRate": 77.6
+    },
+    {
+      "term": "portofolio",
+      "termEN": "Loading...",
+      "count": 132,
+      "clicked": 47,
+      "total": 52,
+      "clickRate": 90.4
+    },
+    {
+      "term": "limit order",
+      "termEN": "limit order",
+      "count": 130,
+      "clicked": 29,
+      "total": 39,
+      "clickRate": 74.4
+    },
+    {
+      "term": "verifikasi",
+      "termEN": "verification",
+      "count": 122,
+      "clicked": 61,
+      "total": 66,
+      "clickRate": 92.4
+    },
+    {
+      "term": "spread",
+      "termEN": "Loading...",
+      "count": 121,
+      "clicked": 34,
+      "total": 43,
+      "clickRate": 79.1
+    },
+    {
+      "term": "pluang plus",
+      "termEN": "Loading...",
+      "count": 115,
+      "clicked": 47,
+      "total": 53,
+      "clickRate": 88.7
+    },
+    {
+      "term": "penarikan",
+      "termEN": "withdrawal",
+      "count": 108,
+      "clicked": 14,
+      "total": 27,
+      "clickRate": 51.9
+    },
+    {
+      "term": "yield",
+      "termEN": "Loading...",
+      "count": 102,
+      "clicked": 39,
+      "total": 44,
+      "clickRate": 88.6
+    },
+    {
+      "term": "qris",
+      "termEN": "Loading...",
+      "count": 100,
+      "clicked": 29,
+      "total": 36,
+      "clickRate": 80.6
+    },
+    {
+      "term": "aman",
+      "termEN": "safe",
+      "count": 100,
+      "clicked": 45,
+      "total": 47,
+      "clickRate": 95.7
+    },
+    {
+      "term": "rekening bank",
+      "termEN": "Bank account",
+      "count": 100,
+      "clicked": 23,
+      "total": 28,
+      "clickRate": 82.1
+    },
+    {
+      "term": "authenticator",
+      "termEN": "authenticator",
+      "count": 98,
+      "clicked": 10,
+      "total": 26,
+      "clickRate": 38.5
+    },
+    {
+      "term": "option",
+      "termEN": "Loading...",
+      "count": 98,
+      "clicked": 20,
+      "total": 30,
+      "clickRate": 66.7
+    },
+    {
+      "term": "tarik fisik emas",
+      "termEN": "physical gold withdrawal",
+      "count": 98,
+      "clicked": 19,
+      "total": 32,
+      "clickRate": 59.4
+    },
+    {
+      "term": "usd yield",
+      "termEN": "Loading...",
+      "count": 95,
+      "clicked": 33,
+      "total": 43,
+      "clickRate": 76.7
+    },
+    {
+      "term": "pro mode",
+      "termEN": "Loading...",
+      "count": 95,
+      "clicked": 25,
+      "total": 28,
+      "clickRate": 89.3
+    },
+    {
+      "term": "usd",
+      "termEN": "Loading...",
+      "count": 85,
+      "clicked": 21,
+      "total": 29,
+      "clickRate": 72.4
+    },
+    {
+      "term": "saham indonesia",
+      "termEN": "Loading...",
+      "count": 82,
+      "clicked": 7,
+      "total": 27,
+      "clickRate": 25.9
+    },
+    {
+      "term": "topup",
+      "termEN": "top up",
+      "count": 81,
+      "clicked": 9,
+      "total": 44,
+      "clickRate": 20.5
+    },
+    {
+      "term": "auto invest",
+      "termEN": "Loading...",
+      "count": 79,
+      "clicked": 12,
+      "total": 27,
+      "clickRate": 44.4
+    },
+    {
+      "term": "referral",
+      "termEN": "referral",
+      "count": 78,
+      "clicked": 19,
+      "total": 22,
+      "clickRate": 86.4
+    },
+    {
+      "term": "cashout",
+      "termEN": "Loading...",
+      "count": 78,
+      "clicked": 8,
+      "total": 24,
+      "clickRate": 33.3
+    },
+    {
+      "term": "etf",
+      "termEN": "Loading...",
+      "count": 76,
+      "clicked": 27,
+      "total": 38,
+      "clickRate": 71.1
+    },
+    {
+      "term": "deviden",
+      "termEN": "dividend",
+      "count": 76,
+      "clicked": 21,
+      "total": 28,
+      "clickRate": 75
+    },
+    {
+      "term": "hapus",
+      "termEN": "Loading...",
+      "count": 75,
+      "clicked": 7,
+      "total": 28,
+      "clickRate": 25
+    },
+    {
+      "term": "kripto futures",
+      "termEN": "Loading...",
+      "count": 74,
+      "clicked": 22,
+      "total": 28,
+      "clickRate": 78.6
+    },
+    {
+      "term": "ahli waris",
+      "termEN": "heir",
+      "count": 74,
+      "clicked": 25,
+      "total": 30,
+      "clickRate": 83.3
+    },
+    {
+      "term": "fee",
+      "termEN": "Loading...",
+      "count": 73,
+      "clicked": 6,
+      "total": 18,
+      "clickRate": 33.3
+    },
+    {
+      "term": "konversi",
+      "termEN": "Loading...",
+      "count": 70,
+      "clicked": 21,
+      "total": 27,
+      "clickRate": 77.8
+    },
+    {
+      "term": "lupa pin",
+      "termEN": "forgot PIN",
+      "count": 70,
+      "clicked": 12,
+      "total": 20,
+      "clickRate": 60
+    },
+    {
+      "term": "future",
+      "termEN": "Loading...",
+      "count": 68,
+      "clicked": 24,
+      "total": 29,
+      "clickRate": 82.8
+    },
+    {
+      "term": "verifikasi identitas",
+      "termEN": "Loading...",
+      "count": 67,
+      "clicked": 31,
+      "total": 33,
+      "clickRate": 93.9
+    }
+  ],
+  "piiSearches": {
+    "count": 14698,
+    "pct": 55.6,
+    "byChannel": {
+      "Internal App": 14669,
+      "Public Knowledge Base": 29
+    }
+  },
+  "ragFeedback": {
+    "totalResponses": 32972,
+    "feedbackCollected": 0,
+    "feedbackRate": 0
+  },
+  "_source": "New_Search_utterances.xlsx",
+  "_processedAt": "2026-02-24T11:34:51.581Z"
+}

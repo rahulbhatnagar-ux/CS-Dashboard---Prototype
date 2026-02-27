@@ -1,0 +1,248 @@
+{
+  "summary": {
+    "trueEmailShare": {"value": 51.3, "numerator": 30226, "denominator": 58957, "subtitle": "Email + EmailCase combined"},
+    "overallFCR": {"value": 79.0, "numerator": 28463, "denominator": 36028, "subtitle": "Single-touch resolution"},
+    "channelSwitchers": {"value": 5234, "pct": 17.0, "totalUsers": 30818, "subtitle": "Used 2+ channels"},
+    "mergeRate": {"value": 2.3, "count": 1380, "subtitle": "Duplicate effort"},
+    "l2Escalation": {"value": 3.7, "count": 2153, "subtitle": "Unresolved at L1"}
+  },
+  "channelMix": {
+    "correctionInsight": "Email is 51.3% of all tickets \u2014 not 9%. Post Help Center launch, the old Email workflow was migrated to EmailCase. These are the same channel, different routing. EmailCase (28.5%) + Email legacy (22.8%) = 51.3% of all volume. The Help Center reduced email's SHARE but email remains the dominant channel by a wide margin.",
+    "grouped": [
+      {"channel": "Email (all)", "volume": 30226, "pct": 51.3, "color": "#EF4444", "breakdown": "EmailCase: 16,786 (28.5%) + Email: 13,440 (22.8%)"},
+      {"channel": "Live Chat (all)", "volume": 10026, "pct": 17.0, "color": "#3B82F6", "breakdown": "Live Chat: 7,540 (12.8%) + Live Chatbot Case: 2,486 (4.2%)"},
+      {"channel": "In-App", "volume": 7020, "pct": 11.9, "color": "#8B5CF6", "breakdown": "77% are auto-created Device Verification tickets"},
+      {"channel": "Phone", "volume": 6021, "pct": 10.2, "color": "#F59E0B", "breakdown": "Terminal resolution channel \u2014 100% close rate"},
+      {"channel": "Social", "volume": 2820, "pct": 4.8, "color": "#EC4899", "breakdown": "Instagram: 922, Play Store: 1,875, Facebook: 23"},
+      {"channel": "L1 Agent", "volume": 2770, "pct": 4.7, "color": "#10B981", "breakdown": "Direct agent assignment \u2014 device verification specialist"},
+      {"channel": "Help Center / Bot", "volume": 61, "pct": 0.1, "color": "#6B7280", "breakdown": "Only 61 direct HC tickets \u2014 most HC users go through bot/chat first"}
+    ],
+    "monthlyShift": [
+      {"month": "Oct 2025", "total": 17597, "emailPct": 57, "liveChatPct": 24, "inAppPct": 5, "phonePct": 8, "l1Pct": 3, "socialPct": 3},
+      {"month": "Nov 2025", "total": 14353, "emailPct": 52, "liveChatPct": 20, "inAppPct": 10, "phonePct": 9, "l1Pct": 4, "socialPct": 5},
+      {"month": "Dec 2025", "total": 13570, "emailPct": 49, "liveChatPct": 11, "inAppPct": 16, "phonePct": 12, "l1Pct": 6, "socialPct": 6},
+      {"month": "Jan 2026", "total": 13437, "emailPct": 45, "liveChatPct": 11, "inAppPct": 20, "phonePct": 13, "l1Pct": 6, "socialPct": 5}
+    ],
+    "shiftAnnotations": [
+      {"label": "Email: 57% \u2192 45% (\u221212pp)", "color": "#EF4444"},
+      {"label": "In-App: 5% \u2192 20% (+15pp)", "note": "Mostly Device Verification auto-tickets, not true channel shift", "color": "#8B5CF6"},
+      {"label": "Live Chat: 24% \u2192 11% (\u221213pp)", "note": "Genuine shift \u2014 users going through bot instead", "color": "#3B82F6"},
+      {"label": "Total volume: 17,597 \u2192 13,437 (\u221224%)", "color": "#94A3B8"}
+    ],
+    "shiftInsight": "The HC launch shifted channel mix but didn't reduce email dominance. Email dropped from 57% to 45% share \u2014 but it's still 51.3% of cumulative volume. The real shift was Live Chat (\u221213pp) as users now enter through the bot. In-App growth is misleading \u2014 77% is auto-created Device Verification tickets, not users choosing In-App."
+  },
+  "resolution": {
+    "fcrByChannel": [
+      {"channel": "Live Chatbot Case", "fcr": 71.4, "multiTouch": 571, "total": 1996, "insight": "Worst FCR \u2014 bot-escalated tickets need repeat contact"},
+      {"channel": "EmailCase", "fcr": 75.7, "multiTouch": 2982, "total": 12271, "insight": "Highest volume + low FCR = biggest absolute rework"},
+      {"channel": "Phone", "fcr": 75.6, "multiTouch": 247, "total": 1011, "insight": "Users call when other channels failed \u2014 repeat is about the issue, not the channel"},
+      {"channel": "L1 Agent", "fcr": 79.2, "multiTouch": 65, "total": 312, "insight": "Specialist channel \u2014 lower volume but complex cases"},
+      {"channel": "Live Chat", "fcr": 78.9, "multiTouch": 1299, "total": 6164, "insight": "Moderate FCR \u2014 live agents resolve most in-session"},
+      {"channel": "Email (legacy)", "fcr": 81.4, "multiTouch": 1370, "total": 7369, "insight": "Legacy email \u2014 higher FCR than EmailCase (more mature workflow)"},
+      {"channel": "In-App", "fcr": 85.8, "multiTouch": 903, "total": 6339, "insight": "High FCR \u2014 but 49% stuck in Waiting on User (auto-tickets)"}
+    ],
+    "fcrByCategory": [
+      {"category": "Security & Fraud", "fcr": 51.4, "multi": 103, "total": 212},
+      {"category": "Account Management", "fcr": 66.2, "multi": 1331, "total": 3943},
+      {"category": "Indonesian Stocks", "fcr": 68.1, "multi": 150, "total": 470},
+      {"category": "Asset Crypto", "fcr": 73.7, "multi": 185, "total": 704},
+      {"category": "Top up", "fcr": 74.9, "multi": 575, "total": 2288},
+      {"category": "Asset Crypto Futures", "fcr": 75.6, "multi": 48, "total": 197},
+      {"category": "Inquiry", "fcr": 77.1, "multi": 2577, "total": 11258},
+      {"category": "Asset Mutual Fund", "fcr": 79.9, "multi": 40, "total": 199},
+      {"category": "Onboarding", "fcr": 80.8, "multi": 310, "total": 1617},
+      {"category": "Asset Gold", "fcr": 80.8, "multi": 105, "total": 548},
+      {"category": "Application", "fcr": 82.4, "multi": 1184, "total": 6743},
+      {"category": "Asset US Stocks", "fcr": 84.2, "multi": 103, "total": 650},
+      {"category": "Other Issues (General)", "fcr": 85.2, "multi": 576, "total": 3904},
+      {"category": "Cashout", "fcr": 87.3, "multi": 92, "total": 725},
+      {"category": "Marketing Program", "fcr": 90.5, "multi": 16, "total": 169}
+    ],
+    "fcrCategoryInsight": "Security & Fraud (51.4% FCR) and Account Management (66.2% FCR) are the hardest categories to resolve. Account Management alone generates 1,331 multi-touch clusters \u2014 17.6% of all repeat contacts. These are issues like phone number changes, KYC verification, and account reactivation that require backend system actions no article or bot can perform today.",
+    "effortCost": [
+      {
+        "channel": "EmailCase", "volume": 16786,
+        "customerEffort": {"label": "HIGH", "color": "red", "reason": "10.2% L2 escalation, 4.2% merge rate, 2.2% customer inactive"},
+        "agentEffort": {"label": "HIGH", "color": "red", "reason": "14% rework (merge+L2), only 79% direct close"},
+        "closeRate": 79.5, "reworkRate": 14.5, "waitingRate": 3.5, "inactiveRate": 2.2,
+        "costSignal": "HIGHEST \u2014 high volume \u00d7 high rework = maximum cost"
+      },
+      {
+        "channel": "Email (legacy)", "volume": 13440,
+        "customerEffort": {"label": "MEDIUM", "color": "amber", "reason": "Mature workflow, 0.2% L2, 4.5% merge"},
+        "agentEffort": {"label": "MEDIUM", "color": "amber", "reason": "5% rework, 94% direct close"},
+        "closeRate": 94.0, "reworkRate": 4.7, "waitingRate": 0.8, "inactiveRate": 0.0,
+        "costSignal": "MEDIUM \u2014 high volume but efficient processing"
+      },
+      {
+        "channel": "Live Chat", "volume": 7540,
+        "customerEffort": {"label": "MEDIUM", "color": "amber", "reason": "26.8% also email (channel switch), 15.6 avg turns"},
+        "agentEffort": {"label": "LOW", "color": "green", "reason": "1% rework, 99% direct close"},
+        "closeRate": 98.8, "reworkRate": 0.9, "waitingRate": 0.3, "inactiveRate": 0.0,
+        "costSignal": "LOW per-ticket but high customer effort before reaching agent"
+      },
+      {
+        "channel": "In-App", "volume": 7020,
+        "customerEffort": {"label": "LOW", "color": "green", "reason": "Auto-created tickets (Device Verification = 77%)"},
+        "agentEffort": {"label": "HIGH", "color": "red", "reason": "49% stuck in Waiting on User, only 46% close"},
+        "closeRate": 45.9, "reworkRate": 4.7, "waitingRate": 49.4, "inactiveRate": 0.0,
+        "costSignal": "WASTED \u2014 49% of tickets never engage. Agent checks tickets that go nowhere."
+      },
+      {
+        "channel": "Phone", "volume": 6021,
+        "customerEffort": {"label": "HIGH", "color": "red", "reason": "Users call when other channels fail \u2014 23.4% visited HC first"},
+        "agentEffort": {"label": "MEDIUM", "color": "amber", "reason": "100% close, 0% rework \u2014 but synchronous = expensive per minute"},
+        "closeRate": 100.0, "reworkRate": 0.0, "waitingRate": 0.0, "inactiveRate": 0.0,
+        "costSignal": "HIGH per-ticket \u2014 synchronous channel with 100% resolution but highest unit cost"
+      },
+      {
+        "channel": "L1 Agent", "volume": 2770,
+        "customerEffort": {"label": "MEDIUM", "color": "amber", "reason": "Specialist routing \u2014 users directed here by other agents"},
+        "agentEffort": {"label": "LOW", "color": "green", "reason": "1% rework, 84% close, specialist skills match"},
+        "closeRate": 84.2, "reworkRate": 0.8, "waitingRate": 2.2, "inactiveRate": 0.8,
+        "costSignal": "EFFICIENT \u2014 specialist channel with good resolution"
+      },
+      {
+        "channel": "Live Chatbot Case", "volume": 2486,
+        "customerEffort": {"label": "HIGH", "color": "red", "reason": "71.4% FCR (worst), bot added 15.6 turns of friction before handoff"},
+        "agentEffort": {"label": "LOW", "color": "green", "reason": "2% rework, 98% close \u2014 agent resolves quickly once reached"},
+        "closeRate": 97.9, "reworkRate": 1.7, "waitingRate": 0.1, "inactiveRate": 0.0,
+        "costSignal": "Bot creates customer effort, but agent resolves efficiently once involved"
+      }
+    ]
+  },
+  "switching": {
+    "overview": {
+      "switcherUsers": 5234,
+      "switcherPct": 17.0,
+      "switcherClusters": 4095,
+      "switcherClusterPct": 11.4,
+      "fcrSwitchers": 62.3,
+      "fcrNonSwitchers": 82.8,
+      "fcrGap": 20.5
+    },
+    "patterns": [
+      {"pattern": "EmailCase \u2192 L1 Agent", "count": 1674, "interpretation": "Email can't resolve \u2192 specialist agent needed"},
+      {"pattern": "Email \u2192 Live Chat", "count": 728, "interpretation": "Email too slow \u2192 tried real-time channel"},
+      {"pattern": "EmailCase \u2192 Live Chatbot Case", "count": 312, "interpretation": "New email \u2192 then tried bot (reverse expected flow)"},
+      {"pattern": "In-App \u2192 L1 Agent", "count": 278, "interpretation": "Device Verification auto-ticket \u2192 specialist needed"},
+      {"pattern": "Email \u2192 Phone", "count": 144, "interpretation": "Email unresolved \u2192 called for immediate help"},
+      {"pattern": "L1 Agent \u2192 Live Chat", "count": 132, "interpretation": "Agent \u2192 chat follow-up"},
+      {"pattern": "Email \u2192 In-App", "count": 110, "interpretation": "Email user also triggered In-App ticket"},
+      {"pattern": "L1 Agent \u2192 Live Chatbot Case", "count": 108, "interpretation": "Agent \u2192 then bot-escalated case"},
+      {"pattern": "EmailCase + L1 Agent + Live Chatbot Case", "count": 102, "interpretation": "Triple-channel \u2014 3 contacts for same issue"}
+    ],
+    "patternInsight": "The #1 switch pattern is EmailCase \u2192 L1 Agent (1,674 clusters). This means email agents can't resolve the issue and must hand off to specialists. The user waits for email reply, gets re-routed, waits again. The #2 pattern (Email \u2192 Live Chat, 728) shows users giving up on async email and trying real-time. Both patterns are effort signals \u2014 the user is doing the work the system should automate.",
+    "merged": {
+      "totalMerged": 1380,
+      "mergeRate": 2.3,
+      "byChannel": [
+        {"channel": "Help Center", "merged": 7, "total": 58, "mergeRate": 12.1},
+        {"channel": "Email (legacy)", "merged": 608, "total": 13440, "mergeRate": 4.5},
+        {"channel": "EmailCase", "merged": 712, "total": 16786, "mergeRate": 4.2},
+        {"channel": "L1 Agent", "merged": 22, "total": 2770, "mergeRate": 0.8},
+        {"channel": "In-App", "merged": 29, "total": 7020, "mergeRate": 0.4}
+      ],
+      "byCategory": [
+        {"category": "Inquiry", "merged": 621},
+        {"category": "Other Issues (General)", "merged": 597},
+        {"category": "Account Management", "merged": 34},
+        {"category": "Top up", "merged": 31},
+        {"category": "Application", "merged": 30}
+      ],
+      "correlations": {
+        "mergedAndSwitched": {"count": 373, "pctOfMerged": 36.9, "insight": "37% of merged-ticket users also switched channels"},
+        "mergedAndL2": {"count": 142, "pctOfMerged": 14.0, "insight": "14% of merged-ticket users also hit L2 escalation"},
+        "switchedAndL2": {"count": 1964, "pctOfSwitchers": 37.5, "insight": "37.5% of channel-switchers also had L2 escalation"},
+        "allThree": {"count": 141, "insight": "141 users had merged tickets + channel switch + L2 escalation \u2014 maximum effort population"}
+      },
+      "mergedInsight": "Merged tickets are a direct cost multiplier. 1,380 tickets merged = duplicate work for agents. 37% of merged-ticket users also switched channels, meaning they created duplicates BECAUSE they didn't get a response in the first channel. The correlation between merging, switching, and L2 escalation (141 users experienced all three) proves these aren't independent problems \u2014 they're the same failure cascade."
+    },
+    "venn": {
+      "mergedOnly": 496,
+      "switchOnly": 2756,
+      "l2Only": 515,
+      "mergedAndSwitch": 232,
+      "mergedAndL2": 1,
+      "switchAndL2": 1823,
+      "allThree": 141,
+      "mergedTotal": 1011,
+      "switchTotal": 5234,
+      "l2Total": 2021
+    }
+  },
+  "deviceVerification": {
+    "total": 6553,
+    "pctOfAllTickets": 11.1,
+    "byOrigin": [
+      {"origin": "In-App", "count": 5045, "pct": 77.0},
+      {"origin": "EmailCase", "count": 640, "pct": 9.8},
+      {"origin": "L1 Agent", "count": 584, "pct": 8.9},
+      {"origin": "Live Chatbot Case", "count": 112, "pct": 1.7},
+      {"origin": "Phone", "count": 70, "pct": 1.1},
+      {"origin": "Other", "count": 102, "pct": 1.6}
+    ],
+    "inAppStatus": {
+      "waitingOnUser": 49.3,
+      "closed": 45.9,
+      "note": "77% of In-App tickets are Device Verification. 49% sit in 'Waiting on User' forever \u2014 the user never responds because they already resolved it themselves or abandoned."
+    },
+    "insight": "Device Verification creates 6,553 tickets (11.1% of all volume) with no customer-initiated action. The app auto-creates a ticket when a new device is detected. 77% come through In-App, and 49% of those stay in \"Waiting on User\" permanently. This is phantom volume \u2014 no customer asked for help, no resolution is needed, but agents must check each one. This single sub-category creates more tickets than Phone, L1 Agent, or Social channels."
+  },
+  "recommendation": {
+    "title": "Replace Ticket Creation with System-State Awareness",
+    "currentFlow": [
+      {"step": 1, "label": "User has issue"},
+      {"step": 2, "label": "Lands on Help Center"},
+      {"step": 3, "label": "Searches (59.8% fail)"},
+      {"step": 4, "label": "Bot (67.7% fail)"},
+      {"step": 5, "label": "Creates ticket"},
+      {"step": 6, "label": "Waits for agent"},
+      {"step": 7, "label": "Agent looks up system"},
+      {"step": 8, "label": "Agent tells user status"}
+    ],
+    "currentStats": {"steps": "6-8", "effort": "HIGH", "agentTime": "Duplicates system lookup"},
+    "proposedFlow": [
+      {"step": 1, "label": "User has issue"},
+      {"step": 2, "label": "Lands on Help Center"},
+      {"step": 3, "label": "System detects user state"},
+      {"step": 4, "label": "Shows personalized alert panel"},
+      {"step": 5, "label": "Issue self-resolved (no ticket)"},
+      {"step": 6, "label": "OR: \"Still need help?\" \u2192 specialist WITH context"}
+    ],
+    "proposedStats": {"steps": "2-3", "effort": "LOW", "agentTime": "Zero for resolved, minimal for escalated"},
+    "alertExamples": [
+      "Your withdrawal of Rp 500,000 via BCA is processing (est. 1-2 business days)",
+      "Your KYC verification is pending review (est. 24 hours)",
+      "Your new device was detected \u2014 tap to verify"
+    ],
+    "detectableStates": [
+      {"state": "Withdrawal status", "detail": "pending, processing, completed, rejected"},
+      {"state": "KYC/Verification status", "detail": "pending, approved, rejected, documents needed"},
+      {"state": "Device verification", "detail": "new device detected, verified, blocked"},
+      {"state": "Top-up status", "detail": "pending, confirmed, failed"},
+      {"state": "Account status", "detail": "active, deactivated, suspended, reactivation pending"}
+    ],
+    "impactEstimate": [
+      {"category": "Device Verification", "current": 6553, "deflectable": 6553, "deflectPct": 100, "note": "Auto-resolved by alert"},
+      {"category": "Withdrawal inquiries (BCA Refund)", "current": 3452, "deflectable": 2071, "deflectPct": 60, "note": "Self-resolved by status display"},
+      {"category": "KYC/Verification inquiries", "current": 1266, "deflectable": 633, "deflectPct": 50, "note": "Self-resolved by status display"},
+      {"category": "Top-up inquiries", "current": 1316, "deflectable": 526, "deflectPct": 40, "note": "Self-resolved by status display"}
+    ],
+    "totalDeflectable": 8500,
+    "totalDeflectPct": 14.4,
+    "agentHoursSaved": 1417,
+    "technicalRequirements": [
+      "Identity resolution: User must be authenticated (logged in) when reaching HC",
+      "Backend API: Real-time read from admin.pluang.com status endpoints",
+      "Frontend: Dynamic alert component on HC landing page (post-login)",
+      "Fallback: \"Still need help?\" button \u2192 direct to specialist agent (not general bot)",
+      "Context pass-through: When user clicks \"Still need help?\", their system state + issue type is passed to agent \u2014 zero re-collection needed"
+    ],
+    "whyBetter": [
+      {"approach": "Bot improvement", "result": "Reduces failure from 67.7% to maybe 40% \u2014 still requires user to describe issue"},
+      {"approach": "Email improvement", "result": "Reduces response time from 3 days to 1 day \u2014 still creates a ticket"},
+      {"approach": "System-state alert", "result": "ELIMINATES the contact entirely for status-check issues"}
+    ]
+  }
+}

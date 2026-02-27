@@ -1,0 +1,103 @@
+{
+  "category_l1": "Top up",
+  "description": "SOP for handling top-up related customer issues",
+  "sub_categories": [
+    {
+      "sub_category_l2": "Direct BCA Top Up",
+      "scenarios": [
+        {
+          "scenario": "BCA direct top-up not reflected",
+          "symptoms": ["User transferred via BCA but balance not updated", "Transaction proof available"],
+          "root_cause": "BCA virtual account matching delay or incorrect VA number used",
+          "resolution": "Verify VA number used. Check BCA reconciliation. If confirmed, manual credit may be needed. Escalate to ops.",
+          "script_id": "Bahasa Indonesia",
+          "script_en": "Please share your proof of transfer. We'll verify the BCA virtual account number and reconcile. BCA direct transfers may take up to 1x24 hours to reflect."
+        },
+        {
+          "scenario": "BCA name not unique — top-up rejected",
+          "symptoms": ["Top-up fails at BCA", "Name validation error"],
+          "root_cause": "BCA requires unique name matching, common names may fail validation",
+          "resolution": "Check user's full name against BCA records. May need to update KYC name or use alternative top-up method.",
+          "script_id": "Bahasa Indonesia",
+          "script_en": "BCA requires exact name matching. Please ensure the name on your BCA account matches your Pluang KYC name. If the issue persists, try using an alternative top-up method."
+        },
+        {
+          "scenario": "BCA direct refund needed",
+          "symptoms": ["Double payment", "Wrong amount transferred"],
+          "root_cause": "User error — duplicate transfer or wrong amount",
+          "resolution": "Verify transaction details. Process refund via BCA direct channel. Refund timeline: 3-7 business days.",
+          "script_id": "Bahasa Indonesia",
+          "script_en": "We've received your refund request. BCA direct refunds take 3-7 business days to process. You'll receive a notification once completed."
+        }
+      ]
+    },
+    {
+      "sub_category_l2": "GoPay Top Up",
+      "scenarios": [
+        {
+          "scenario": "GoPay top-up failed — balance deducted but not credited",
+          "symptoms": ["GoPay balance deducted", "Pluang balance not updated"],
+          "root_cause": "GoPay callback failed or delayed",
+          "resolution": "Check GoPay transaction status. If confirmed deducted, manual credit needed. Escalate to ops with GoPay transaction ID.",
+          "script_id": "Bahasa Indonesia",
+          "script_en": "We can see the GoPay deduction. There may be a processing delay. If your Pluang balance isn't updated within 1 hour, please share the GoPay transaction ID and we'll investigate."
+        },
+        {
+          "scenario": "GoPay top-up — user redirected but didn't complete",
+          "symptoms": ["Top-up initiated but not completed", "User closed GoPay app"],
+          "root_cause": "User didn't complete the payment flow in GoPay app",
+          "resolution": "Explain that the payment wasn't completed. No charge was made. Ask user to retry.",
+          "script_id": "Bahasa Indonesia",
+          "script_en": "It looks like the GoPay payment wasn't completed. No charge was made to your GoPay account. Please try the top-up again and complete the payment in the GoPay app."
+        }
+      ]
+    },
+    {
+      "sub_category_l2": "Alfamart Top Up",
+      "scenarios": [
+        {
+          "scenario": "Alfamart top-up code expired",
+          "symptoms": ["Payment code expired", "Couldn't pay at Alfamart in time"],
+          "root_cause": "Payment code has 24-hour expiry",
+          "resolution": "Explain expiry. Ask user to generate new payment code. No charge for expired codes.",
+          "script_id": "Bahasa Indonesia",
+          "script_en": "Alfamart payment codes expire after 24 hours. Please generate a new code in the app and complete the payment at your nearest Alfamart."
+        },
+        {
+          "scenario": "Alfamart top-up paid but not reflected",
+          "symptoms": ["Paid at Alfamart", "Balance not updated"],
+          "root_cause": "Alfamart reconciliation delay (can take up to 2-3 hours)",
+          "resolution": "Check Alfamart reconciliation status. Usually resolves within 2-3 hours. Keep receipt as proof.",
+          "script_id": "Bahasa Indonesia",
+          "script_en": "Alfamart top-ups can take up to 2-3 hours to reflect in your Pluang balance. Please keep your receipt. If the balance isn't updated after 3 hours, please contact us with your receipt photo."
+        }
+      ]
+    },
+    {
+      "sub_category_l2": "QRIS Top Up",
+      "scenarios": [
+        {
+          "scenario": "QRIS top-up failed",
+          "symptoms": ["QRIS payment failed", "QR code scan error"],
+          "root_cause": "QRIS payment expired, network error, or insufficient balance in e-wallet",
+          "resolution": "Ask user to check e-wallet balance and retry. QRIS codes expire after 30 minutes.",
+          "script_id": "Bahasa Indonesia",
+          "script_en": "QRIS payment codes are valid for 30 minutes. Please ensure sufficient balance in your e-wallet and try scanning the QR code again."
+        }
+      ]
+    },
+    {
+      "sub_category_l2": "Top Up Limit",
+      "scenarios": [
+        {
+          "scenario": "Top-up exceeds limit",
+          "symptoms": ["Top-up rejected", "Amount exceeds maximum"],
+          "root_cause": "Daily/monthly top-up limit reached or single transaction limit exceeded",
+          "resolution": "Explain top-up limits by method. Suggest splitting or using different method.",
+          "script_id": "Bahasa Indonesia",
+          "script_en": "Top-up limits vary by method. Bank transfer: up to IDR 100,000,000/day. E-wallet: varies by provider. Please try a smaller amount or a different payment method."
+        }
+      ]
+    }
+  ]
+}

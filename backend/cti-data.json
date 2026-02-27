@@ -1,0 +1,164 @@
+{
+  "activeTickets": [
+    {
+      "key": "CTI-1350",
+      "summary": "[P1] [PLUANG PLUS] Request Watchlist History - Anita Mayangpuspa - 12735755",
+      "status": "In Progress",
+      "priority": "Normal",
+      "assignee": "karan.sudhendran",
+      "created": "2026-02-23",
+      "updated": "2026-02-24",
+      "ageDays": 1,
+      "category": "Pluang Plus",
+      "userId": "12735755"
+    },
+    {
+      "key": "CTI-1349",
+      "summary": "[P0] [OPS] Aset Indonesia Verification Issue - GABRIELLA DELARUS - 13829126",
+      "status": "To Do",
+      "priority": "Normal",
+      "assignee": "Abhishek Kumar",
+      "created": "2026-02-23",
+      "updated": "2026-02-23",
+      "ageDays": 1,
+      "category": "KYC/Verification",
+      "userId": "13829126"
+    },
+    {
+      "key": "CTI-1348",
+      "summary": "[P1] Request Monthly Statement - MINTARIA - 1472606",
+      "status": "In Progress",
+      "priority": "Normal",
+      "assignee": "Rajan Srivastava",
+      "created": "2026-02-23",
+      "updated": "2026-02-24",
+      "ageDays": 1,
+      "category": "Reporting",
+      "userId": "1472606"
+    },
+    {
+      "key": "CTI-1345",
+      "summary": "[P0] [OPS] Aset Indonesia Verification Issue - Eugenia Diva Widodo - 2228746",
+      "status": "In Progress",
+      "priority": "[P0] Universe Ends",
+      "assignee": "Abhishek Kumar",
+      "created": "2026-02-22",
+      "updated": "2026-02-23",
+      "ageDays": 2,
+      "category": "KYC/Verification",
+      "userId": "2228746"
+    },
+    {
+      "key": "CTI-1341",
+      "summary": "[P0] [User] [Pluang Plus] OTP Issue When Transfer Crypto To Cold Wallet - AHMAD FERWITO - 12240025",
+      "status": "In Progress",
+      "priority": "Normal",
+      "assignee": "Achal Gupta",
+      "created": "2026-02-19",
+      "updated": "2026-02-24",
+      "ageDays": 5,
+      "category": "Account/Auth",
+      "userId": "12240025"
+    },
+    {
+      "key": "CTI-1339",
+      "summary": "[P0] [OPS] Aset Indonesia Verification Issue - OCSON REGINALD COCEN - 13327949",
+      "status": "In Progress",
+      "priority": "Normal",
+      "assignee": "Abhishek Kumar",
+      "created": "2026-02-19",
+      "updated": "2026-02-23",
+      "ageDays": 5,
+      "category": "KYC/Verification",
+      "userId": "13327949"
+    },
+    {
+      "key": "CTI-1338",
+      "summary": "[P0] [OPS] Aset Indonesia Verification Issue - Husni Mubarok - 13072272",
+      "status": "In Progress",
+      "priority": "Normal",
+      "assignee": "Abhishek Kumar",
+      "created": "2026-02-19",
+      "updated": "2026-02-24",
+      "ageDays": 5,
+      "category": "KYC/Verification",
+      "userId": "13072272"
+    },
+    {
+      "key": "CTI-1298",
+      "summary": "[P0] [Pluang Plus] Suspicious Transaction and Activity - LIONG HARTONO SANJAYA - 5358877",
+      "status": "In Progress",
+      "priority": "[P0] Universe Ends",
+      "assignee": "Harshit Singhal",
+      "created": "2026-02-03",
+      "updated": "2026-02-20",
+      "ageDays": 21,
+      "category": "Pluang Plus",
+      "userId": "5358877"
+    }
+  ],
+  "recentlyResolved": [
+    {"key": "CTI-1353", "summary": "[P0] Request Reactivate Account Suspicious Activity - SITI NURHATI - 12869088", "assignee": "sing.kiat", "resolved": "2026-02-24", "resolutionHours": 2.6, "category": "Account Reactivation"},
+    {"key": "CTI-1352", "summary": "[P0] Crypto Received Issue Status Success [Correct Details] - Dea Auliya Raflyana - 13476893", "assignee": "Muhammad Iqbal", "resolved": "2026-02-24", "resolutionHours": 3.8, "category": "Transfer/Crypto"},
+    {"key": "CTI-1351", "summary": "[P0] Crypto Received Issue Status Success [Correct Details] - prasetiyo - 13262158", "assignee": "Muhammad Iqbal", "resolved": "2026-02-24", "resolutionHours": 4.1, "category": "Transfer/Crypto"},
+    {"key": "CTI-1347", "summary": "[P0] Unable to Cashout from Balance IDR - Hanif Maulana - 13178028", "assignee": "karan.sudhendran", "resolved": "2026-02-24", "resolutionHours": 26.3, "category": "Withdrawal"},
+    {"key": "CTI-1346", "summary": "[P1] [PluangPlus] Pluang Cuan Issue - DICKY HERIREZA Z - 3837002", "assignee": "Muhammad Ridwan", "resolved": "2026-02-24", "resolutionHours": 31.7, "category": "Pluang Plus"},
+    {"key": "CTI-1344", "summary": "Portofolio Page Error - Deri Tadarus - 12896353", "assignee": "karan.sudhendran", "resolved": "2026-02-24", "resolutionHours": 48.2, "category": "App/Portfolio"},
+    {"key": "CTI-1343", "summary": "[P0] [OPS] Aset Indonesia Verification Issue - FITRIA SARI AGUSTINA - 11488668", "assignee": "Abhishek Kumar", "resolved": "2026-02-21", "resolutionHours": 52.4, "category": "KYC/Verification"},
+    {"key": "CTI-1342", "summary": "[P0] [Pluang Plus] Suspicious Transaction - HENDY SETYA BUDI - 11553240", "assignee": "Harshit Singhal", "resolved": "2026-02-21", "resolutionHours": 67.1, "category": "Pluang Plus"},
+    {"key": "CTI-1340", "summary": "[P0] Request Monthly Statement Jan 2026 - Multiple Users", "assignee": "Rajan Srivastava", "resolved": "2026-02-20", "resolutionHours": 28.9, "category": "Reporting"},
+    {"key": "CTI-1337", "summary": "[P0] Crypto Transfer Stuck - Status Pending - RIZKY FIRMANSYAH - 12998341", "assignee": "Muhammad Iqbal", "resolved": "2026-02-19", "resolutionHours": 18.6, "category": "Transfer/Crypto"}
+  ],
+  "analytics": {
+    "categoryBreakdown": [
+      {"category": "KYC/Verification", "count": 28},
+      {"category": "Transfer/Crypto", "count": 14},
+      {"category": "Pluang Plus", "count": 14},
+      {"category": "Reporting", "count": 7},
+      {"category": "Withdrawal", "count": 5},
+      {"category": "Account Reactivation", "count": 1},
+      {"category": "App/Portfolio", "count": 1},
+      {"category": "Account/Auth", "count": 1},
+      {"category": "Email/Communication", "count": 1},
+      {"category": "Other", "count": 28}
+    ],
+    "weeklyTrend": [
+      {"week": "Jan 12", "created": 10, "resolved": 10},
+      {"week": "Jan 19", "created": 13, "resolved": 13},
+      {"week": "Jan 26", "created": 11, "resolved": 11},
+      {"week": "Feb 02", "created": 29, "resolved": 28},
+      {"week": "Feb 09", "created": 17, "resolved": 17},
+      {"week": "Feb 16", "created": 12, "resolved": 8},
+      {"week": "Feb 23", "created": 8, "resolved": 5}
+    ],
+    "resolutionDistribution": [
+      {"bucket": "<24 hours", "count": 30, "pct": 32.6},
+      {"bucket": "24-72 hours", "count": 27, "pct": 29.3},
+      {"bucket": ">72 hours", "count": 35, "pct": 38.0}
+    ],
+    "resolutionStats": {
+      "avgHours": 78.3,
+      "medianHours": 45.2,
+      "p90Hours": 155.5
+    },
+    "assigneeWorkload": [
+      {"assignee": "Muhammad Iqbal", "count": 14},
+      {"assignee": "Ivic Junior", "count": 11},
+      {"assignee": "Abhishek Kumar", "count": 10},
+      {"assignee": "Bayu Ardianto", "count": 9},
+      {"assignee": "Sachin Goel", "count": 5},
+      {"assignee": "Varun Chandel", "count": 5},
+      {"assignee": "karan.sudhendran", "count": 4},
+      {"assignee": "Achal Gupta", "count": 4},
+      {"assignee": "Kartini Kartini", "count": 4},
+      {"assignee": "septyan.eka", "count": 4}
+    ],
+    "insights": [
+      "4 of 8 active tickets are KYC/Aset Indonesia verification — single assignee bottleneck (Abhishek Kumar)",
+      "CTI-1298 open 21 days — Pluang Plus suspicious activity investigation",
+      "Week of Feb 2 saw 29 tickets (2.2x normal) — investigate spike",
+      "32.6% resolved <24h, but 38% take >3 days — bimodal distribution suggests some ticket types are structurally slow",
+      "KYC/Verification (28%) and Transfer/Crypto (14%) account for 42% of all CTI volume — both are ops-dependent, not CS-fixable"
+    ]
+  }
+}

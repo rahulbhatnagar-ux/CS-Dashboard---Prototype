@@ -1,0 +1,78 @@
+{
+  "category_l1": "Asset Crypto",
+  "sub_category_l2": "Crypto Send/Receive",
+  "description": "SOP for handling crypto send and receive issues",
+  "sub_categories": [
+    {
+      "sub_category_l2": "Crypto Send Failed",
+      "scenarios": [
+        {
+          "scenario": "Crypto send transaction failed",
+          "symptoms": ["Send transaction fails", "Error during withdrawal"],
+          "root_cause": "Insufficient balance, wrong address format, or network congestion",
+          "resolution": "Verify wallet address format matches the network. Check minimum send amount. Check network status.",
+          "script_id": "Bahasa Indonesia",
+          "script_en": "Please verify: 1) The wallet address is correct and matches the network (e.g., ERC-20 for Ethereum), 2) You meet the minimum send amount, 3) You have sufficient balance including network fees."
+        },
+        {
+          "scenario": "Crypto send — wrong network used",
+          "symptoms": ["Crypto sent to wrong network", "Funds not received at destination"],
+          "root_cause": "User sent crypto on wrong blockchain network (e.g., sent ERC-20 to BSC address)",
+          "resolution": "Unfortunately, cross-network sends cannot be reversed. Escalate to engineering for possible recovery (depends on network).",
+          "script_id": "Bahasa Indonesia",
+          "script_en": "Sending crypto to the wrong network may result in permanent loss. We'll escalate this to our technical team to investigate if recovery is possible. Please note that recovery is not guaranteed."
+        },
+        {
+          "scenario": "Crypto send stuck — pending for too long",
+          "symptoms": ["Send shows as pending", "Transaction not confirmed on blockchain"],
+          "root_cause": "Network congestion or low gas fee",
+          "resolution": "Check blockchain explorer for transaction hash. If broadcast, it will confirm when network clears. If not broadcast, may need to retry.",
+          "script_id": "Bahasa Indonesia",
+          "script_en": "Your transaction is pending on the blockchain. During high network activity, confirmations can take longer. Please check the transaction status using the transaction hash provided."
+        }
+      ]
+    },
+    {
+      "sub_category_l2": "Crypto Receive Issues",
+      "scenarios": [
+        {
+          "scenario": "Crypto deposit not credited",
+          "symptoms": ["Deposited crypto but balance not updated", "Transaction confirmed on blockchain"],
+          "root_cause": "Deposit requires minimum confirmations, or deposit to unsupported token/network",
+          "resolution": "Check required confirmations (BTC: 3, ETH: 12). If confirmed enough, escalate to engineering.",
+          "script_id": "Bahasa Indonesia",
+          "script_en": "Crypto deposits require a minimum number of blockchain confirmations (BTC: 3, ETH: 12). Once confirmed, the balance will automatically update. If the required confirmations have passed, please share the transaction hash."
+        },
+        {
+          "scenario": "Crypto deposit — unsupported token sent",
+          "symptoms": ["Sent unsupported token to Pluang address", "Balance not updated"],
+          "root_cause": "User sent an unsupported ERC-20/BEP-20 token to their Pluang address",
+          "resolution": "Recovery depends on token and network. Escalate to engineering. Recovery may incur gas fees.",
+          "script_id": "Bahasa Indonesia",
+          "script_en": "Pluang only supports specific cryptocurrencies. If you sent an unsupported token, we'll escalate to our technical team to investigate recovery options. Please note recovery may not be possible for all tokens."
+        }
+      ]
+    },
+    {
+      "sub_category_l2": "Authenticator Issues",
+      "scenarios": [
+        {
+          "scenario": "User cannot access authenticator for crypto send",
+          "symptoms": ["Lost authenticator access", "Cannot approve send transaction"],
+          "root_cause": "User lost phone or reset authenticator app without backup",
+          "resolution": "Identity verification required. Once verified, disable authenticator and ask user to re-setup.",
+          "script_id": "Bahasa Indonesia",
+          "script_en": "For security, we need to verify your identity before disabling the authenticator. Please provide: 1) Selfie with ID card, 2) Screenshot of last transaction, 3) Registered email confirmation."
+        },
+        {
+          "scenario": "Authenticator setup failed",
+          "symptoms": ["Cannot scan QR code", "Setup verification fails"],
+          "root_cause": "Time sync issue on device, or QR code expired",
+          "resolution": "Ensure device time is set to automatic. Generate new QR code. Try manual key entry if QR fails.",
+          "script_id": "Bahasa Indonesia",
+          "script_en": "Please ensure your phone's time is set to 'Automatic'. Then try: 1) Generate a new QR code in the app, 2) If QR scanning fails, use the manual key entry option."
+        }
+      ]
+    }
+  ]
+}

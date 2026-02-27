@@ -1,0 +1,116 @@
+{
+  "category_l1": "Cashout",
+  "description": "SOP for handling cashout-related customer issues",
+  "sub_categories": [
+    {
+      "sub_category_l2": "Bank Cashout Failed",
+      "scenarios": [
+        {
+          "scenario": "Bank cashout failed — insufficient balance",
+          "symptoms": ["Cashout attempt fails", "Error message about balance"],
+          "root_cause": "User's withdrawable cash is less than cashout amount",
+          "resolution": "Check withdrawable vs total balance. Explain pending settlements. Advise to wait for settlement or reduce cashout amount.",
+          "script_id": "Bahasa Indonesia",
+          "script_en": "Please check your Withdrawable Cash balance. Some funds may be in pending settlement (T+2 for stocks, T+1 for crypto). Once settled, you can withdraw the full amount."
+        },
+        {
+          "scenario": "Bank cashout failed — bank account issue",
+          "symptoms": ["Cashout initiated but failed", "Bank rejection"],
+          "root_cause": "Bank account number invalid, account closed, or name mismatch",
+          "resolution": "Verify bank account details. Check if bank account is still active. Ensure name matches KYC.",
+          "script_id": "Bahasa Indonesia",
+          "script_en": "Your cashout may have failed due to a bank account issue. Please verify: 1) Account number is correct, 2) Account is still active, 3) Name on bank account matches your Pluang account."
+        },
+        {
+          "scenario": "Bank cashout failed — system timeout",
+          "symptoms": ["Cashout stuck in processing", "No success/failure notification"],
+          "root_cause": "Bank partner API timeout or network issue",
+          "resolution": "Check transaction status in admin panel. If stuck >24hrs, escalate to ops team. Refund may be auto-processed.",
+          "script_id": "Bahasa Indonesia",
+          "script_en": "Your cashout is being processed. Bank transfers can take up to 1x24 hours. If you haven't received the funds after 24 hours, please contact us again."
+        },
+        {
+          "scenario": "Bank cashout pending — normal processing",
+          "symptoms": ["Cashout shows as pending", "User expects instant transfer"],
+          "root_cause": "Normal bank processing time (up to 1x24 hours for bank transfer)",
+          "resolution": "Explain normal processing times. Bank transfers: up to 1x24 hours. GoPay: usually instant.",
+          "script_id": "Bahasa Indonesia",
+          "script_en": "Bank transfers typically take up to 1x24 hours to process. GoPay withdrawals are usually instant. Please allow the full processing time before contacting us again."
+        }
+      ]
+    },
+    {
+      "sub_category_l2": "GoPay Cashout Failed",
+      "scenarios": [
+        {
+          "scenario": "GoPay cashout failed — GoPay account issue",
+          "symptoms": ["GoPay cashout fails", "Error during transfer"],
+          "root_cause": "GoPay account not verified, number mismatch, or GoPay service down",
+          "resolution": "Verify GoPay account status. Check if phone number matches. Check GoPay service status.",
+          "script_id": "Bahasa Indonesia",
+          "script_en": "Your GoPay cashout may have failed because: 1) Your GoPay account needs to be verified, 2) The phone number doesn't match, or 3) GoPay service is temporarily unavailable."
+        }
+      ]
+    },
+    {
+      "sub_category_l2": "Cashout Tax & Fees",
+      "scenarios": [
+        {
+          "scenario": "User asks about cashout fees or tax deduction",
+          "symptoms": ["Cashout amount less than expected", "Tax deduction inquiry"],
+          "root_cause": "Applicable taxes or fees deducted from cashout",
+          "resolution": "Explain tax structure: gains on gold/stocks may have applicable tax. Show breakdown of fees vs tax.",
+          "script_id": "Bahasa Indonesia",
+          "script_en": "The cashout amount may differ from your balance due to applicable taxes on investment gains. You can view the detailed breakdown in your transaction history."
+        }
+      ]
+    },
+    {
+      "sub_category_l2": "RDN Cashout",
+      "scenarios": [
+        {
+          "scenario": "RDN (Rekening Dana Nasabah) cashout issue",
+          "symptoms": ["RDN transfer fails", "RDN balance mismatch"],
+          "root_cause": "RDN account sync issue or settlement pending",
+          "resolution": "Check RDN balance sync. Verify settlement status. May need to escalate to ops for manual reconciliation.",
+          "script_id": "Bahasa Indonesia",
+          "script_en": "RDN (Securities Account) cashouts require settled funds. Please wait for T+2 settlement on stock sales, then retry the cashout."
+        }
+      ]
+    },
+    {
+      "sub_category_l2": "Cashout Limit",
+      "scenarios": [
+        {
+          "scenario": "User hits daily/monthly cashout limit",
+          "symptoms": ["Cashout rejected", "Limit exceeded message"],
+          "root_cause": "Cashout amount exceeds daily or monthly withdrawal limit",
+          "resolution": "Explain cashout limits. Suggest splitting into multiple transactions or waiting for next period.",
+          "script_id": "Bahasa Indonesia",
+          "script_en": "You may have reached your daily/monthly withdrawal limit. Please try a smaller amount or wait until the next day/month to continue your withdrawal."
+        }
+      ]
+    },
+    {
+      "sub_category_l2": "Cashout Refund",
+      "scenarios": [
+        {
+          "scenario": "Failed cashout refund not received",
+          "symptoms": ["Cashout failed but balance not restored", "Refund pending"],
+          "root_cause": "Auto-refund processing delay",
+          "resolution": "Check refund status in admin panel. Auto-refunds usually process within 1-3 business days. Escalate if >3 days.",
+          "script_id": "Bahasa Indonesia",
+          "script_en": "If your cashout failed, the funds will be automatically refunded to your Pluang account within 1-3 business days. Please check your balance after this period."
+        },
+        {
+          "scenario": "Partial cashout refund",
+          "symptoms": ["Only part of cashout amount refunded"],
+          "root_cause": "Fees already deducted before refund",
+          "resolution": "Explain that some fees may have been deducted. Check actual refund amount vs original cashout.",
+          "script_id": "Bahasa Indonesia",
+          "script_en": "The refund amount may differ slightly from your original cashout request due to applicable fees. Please check the detailed transaction history for a full breakdown."
+        }
+      ]
+    }
+  ]
+}

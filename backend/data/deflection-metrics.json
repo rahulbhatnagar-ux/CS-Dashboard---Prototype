@@ -1,0 +1,18 @@
+{
+  "hcVisits": 47030,
+  "hcUniqueVisitors": 35505,
+  "hcEntryPoints": {
+    "App": 46030,
+    "Web": 238,
+    "Unknown": 762
+  },
+  "sfTickets": 58957,
+  "bqRecords": 347395,
+  "ticketsFromHCUsers": 0,
+  "deflectionRate": 100,
+  "containmentRate": 78,
+  "identityStitchRate": 93.2,
+  "channelCascade": {},
+  "_source": "bqresultsNEW.xlsx",
+  "_processedAt": "2026-02-24T11:35:05.657Z"
+}

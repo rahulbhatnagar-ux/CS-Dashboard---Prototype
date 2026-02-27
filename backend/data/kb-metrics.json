@@ -1,0 +1,43 @@
+{
+  "totalArticles": 176,
+  "scoredArticles": 175,
+  "totalViews": 5434,
+  "avgScore": 6.73,
+  "dimensionScores": {
+    "accuracy": 8.39,
+    "clarity": 7.42,
+    "completeness": 6.15,
+    "usefulness": 5.79
+  },
+  "tierDistribution": {
+    "Tier 1 (8+)": 50,
+    "Tier 2 (6-8)": 73,
+    "Tier 3 (4-6)": 47,
+    "Tier 4 (<4)": 5
+  },
+  "viewDistribution": {
+    "0-5": 0,
+    "5-10": 0,
+    "10-50": 0,
+    "50-100": 0,
+    "100+": 1
+  },
+  "topArticles": [
+    {
+      "title": "Unknown",
+      "views": 25832,
+      "score": null
+    }
+  ],
+  "botReadyPct": 0,
+  "resolutionGrades": {},
+  "resolutionGradeAPct": 0,
+  "articlesUnder5ViewsPct": 0,
+  "upvotes": {
+    "totalRecords": 3193,
+    "uniqueArticles": 3193
+  },
+  "categories": 1480,
+  "_source": "Knowledge_Base_Data.xlsx",
+  "_processedAt": "2026-02-24T11:34:51.733Z"
+}

@@ -1,0 +1,316 @@
+{
+  "methodology": {
+    "problem": "Pluang has no dedicated product feedback channel. There is no in-app feedback form, no NPS survey, no feature request tracker, and no structured product feedback loop. Product feedback is scattered across support tickets, Play Store reviews, bot complaints, and search utterances \u2014 all mixed in with operational support requests.",
+    "dataSources": [
+      {"name": "Salesforce Items__c field", "count": 58957, "detail": "Primary signal. Each ticket has an Items__c classification set by agents during resolution. 120+ unique Items__c values, mapped to product feedback themes. Example: \"Face Verification Failed\" = product issue, \"Inquiry Cashout General\" = support request"},
+      {"name": "Salesforce Sub_Category field", "count": null, "detail": "Secondary signal. \"Features & Suggestions\" (1,990 tickets) = explicit product feedback. \"Login\", \"Keep loading\", \"Basic Verification\" = implicit product issues"},
+      {"name": "Play Store Review Queue", "count": 1875, "detail": "Reviews ingested into SF as tickets for agent response. Categorized via Items__c: \"Feedback Playstore\" (605), \"Feedback\" (583)"},
+      {"name": "In-App Feedback", "count": 581, "detail": "Feedback submitted through in-app mechanisms. Sources: In-App (461), Live Chat (65), Email (46)"},
+      {"name": "Low App Rating Signal", "count": 381, "detail": "Auto-created from In-App when user rates app poorly. 100% from In-App channel, all categorized as \"Features & Suggestions\""},
+      {"name": "Bot Intent Classification", "count": 51266, "detail": "LLM-classified intents: \"complaint\" (155), \"account_issue\" (600+). Provides sentiment signal but limited volume"}
+    ],
+    "themeRules": [
+      {
+        "theme": "Face Verification / KYC",
+        "rule": "Items__c contains 'Face Verification', 'Basic Verification', 'NIK Already', 'Invalid Selfie', 'Reverification'",
+        "exampleItems": "Face Verification Failed (5,440), NIK Already Registered (913), Inquiry Basic Verification (520)",
+        "signalType": "Product Issue \u2014 system feature failing",
+        "confidence": "HIGH \u2014 specific Items__c values directly map to product failures"
+      },
+      {
+        "theme": "Account Management",
+        "rule": "Items__c contains 'Change Phone Number', 'Account Deactivation/Activation', 'Delete Inactive Bank', 'Reset Authenticator', 'Change Username'",
+        "exampleItems": "Change Phone Number - Registered Number Inactive (1,759), Wrong Input (814), Pluang Account Deactivation (766)",
+        "signalType": "Product Gap \u2014 features users need but can't self-serve",
+        "confidence": "HIGH \u2014 these are self-service features that don't exist"
+      },
+      {
+        "theme": "Withdrawal / Cashout",
+        "rule": "Items__c contains 'Cashout', 'BCA Refund', 'BCA Name', 'BCA Amount', 'BCA Non Bank', 'BCA Different'",
+        "exampleItems": "BCA Name Not Unique (2,303), BCA Different Bank Name (754), BCA Non Bank Transfer (388)",
+        "signalType": "Product Issue \u2014 BCA integration failures + unclear status",
+        "confidence": "HIGH \u2014 BCA-specific items indicate systematic integration issues"
+      },
+      {
+        "theme": "Login & Access",
+        "rule": "Items__c contains 'App Login', 'Inquiry Login', 'Forgot PIN', 'OTP', 'PIN', 'Can't Access'",
+        "exampleItems": "App Login Issue (927), Inquiry OTP/PIN (729), Inquiry Login (519)",
+        "signalType": "Product Issue \u2014 authentication flow problems",
+        "confidence": "HIGH \u2014 login failures are product defects, not support questions"
+      },
+      {
+        "theme": "Device Verification",
+        "rule": "Items__c contains 'New Device', 'Device Verification'",
+        "exampleItems": "New Device Verification General (617), New Device Manual Verification (496)",
+        "signalType": "Product Issue \u2014 device detection creates unnecessary friction",
+        "confidence": "HIGH \u2014 auto-created tickets indicate product-generated workload"
+      },
+      {
+        "theme": "Deposit / Top-up",
+        "rule": "Items__c contains 'Top Up', 'Deposit'",
+        "exampleItems": "Inquiry Top Up Others (466), Inquiry Top Up General (267), Inquiry Top Up QRIS (262)",
+        "signalType": "Mixed \u2014 some product failures, some user confusion",
+        "confidence": "MEDIUM \u2014 mix of failed transactions and inquiry"
+      },
+      {
+        "theme": "Play Store Feedback",
+        "rule": "Items__c = 'Feedback Playstore' or 'Feedback' AND origin = 'Play Store'",
+        "exampleItems": "Feedback Playstore (605), Feedback (583)",
+        "signalType": "User Voice \u2014 direct user opinions",
+        "confidence": "HIGH \u2014 explicit user feedback, but unstructured text"
+      },
+      {
+        "theme": "In-App Feedback",
+        "rule": "Items__c = 'Feedback' AND origin \u2260 'Play Store'",
+        "exampleItems": "Feedback (581 tickets across In-App, Live Chat, Email)",
+        "signalType": "User Voice \u2014 in-app feedback submissions",
+        "confidence": "MEDIUM \u2014 mixed quality, some are actual feedback, some are support requests miscategorized"
+      },
+      {
+        "theme": "App Stability",
+        "rule": "Items__c = 'Low App Rating' or 'Keep Loading Issue'",
+        "exampleItems": "Low App Rating (381), Keep Loading Issue (31)",
+        "signalType": "Product Issue \u2014 app performance",
+        "confidence": "HIGH \u2014 Low App Rating is auto-detected; Keep Loading is user-reported"
+      },
+      {
+        "theme": "Security & Fraud",
+        "rule": "Items__c contains 'Unauthorized Activity', 'Account Hack', 'Security'",
+        "exampleItems": "Unauthorized Activity (311), Account Hack (63)",
+        "signalType": "Product Issue \u2014 security vulnerabilities or perception issues",
+        "confidence": "HIGH \u2014 security incidents are product-level concerns"
+      }
+    ],
+    "exclusions": [
+      {"label": "Spam / Spam Email", "count": 3062, "reason": "Excluded as noise"},
+      {"label": "Duplicate Ticket", "count": 1302, "reason": "Excluded as operational"},
+      {"label": "Unclassified", "count": 8860, "pct": 15, "reason": "Items__c = \"Unclassified\" \u2014 METHODOLOGY GAP. If 10-20% contain product feedback, that's 900-1,800 missing signals."},
+      {"label": "Inquiry-only items", "count": null, "reason": "General questions (\"Inquiry about Pluang\", \"About Pluang\") \u2014 not product feedback"},
+      {"label": "Ops items", "count": null, "reason": "Agent-side operational tasks (\"Ops Checking Others\") \u2014 not user-generated feedback"}
+    ],
+    "limitations": [
+      "15% unclassified \u2014 8,860 tickets have Items__c = \"Unclassified\", potentially hiding product feedback",
+      "No sentiment scoring \u2014 Items__c tells us WHAT the issue is, not HOW the user felt about it",
+      "Agent classification bias \u2014 themes depend on what agents enter in Items__c, which may be inconsistent across agents",
+      "No feedback loop \u2014 there is no mechanism to route product feedback themes back to product teams",
+      "Play Store reviews are unstructured \u2014 1,188 reviews are marked \"Feedback Playstore\" or \"Feedback\" with no further categorization of WHAT the feedback was about",
+      "Bot complaints uncategorized \u2014 155 chat messages classified as \"complaint\" but no sub-categorization of what product feature the complaint targets"
+    ]
+  },
+  "themes": {
+    "data": [
+      {
+        "theme": "Account Management", "volume": 8653, "pctAll": 14.7,
+        "trend": "\u2191 Rising", "trendData": [2017, 2162, 2201, 2273], "trendMonths": ["Oct", "Nov", "Dec", "Jan"],
+        "signalType": "Product Gap", "signalColor": "amber",
+        "sources": "EmailCase: 3,827 | Email: 2,020 | L1 Agent: 1,334",
+        "topItems": "Change Phone# Inactive (1,759), Wrong Input (814), Acct Deactivation (766), Change Phone# Already Registered (684)"
+      },
+      {
+        "theme": "Face Verification / KYC", "volume": 7580, "pctAll": 12.9,
+        "trend": "\u2191 Rising", "trendData": [700, 1282, 2477, 3121], "trendMonths": ["Oct", "Nov", "Dec", "Jan"],
+        "signalType": "Product Issue", "signalColor": "red",
+        "sources": "In-App: 4,775 | EmailCase: 1,272 | Email: 753",
+        "topItems": "Face Verification Failed (5,440), NIK Already Registered (913), Inquiry Basic Verification (520)"
+      },
+      {
+        "theme": "Withdrawal / Cashout", "volume": 5471, "pctAll": 9.3,
+        "trend": "\u2193 Falling", "trendData": [2261, 1455, 951, 804], "trendMonths": ["Oct", "Nov", "Dec", "Jan"],
+        "signalType": "Product Issue", "signalColor": "red",
+        "sources": "EmailCase: 1,562 | Email: 1,522 | Live Chat: 1,259",
+        "topItems": "BCA Name Not Unique (2,303), BCA Different Bank Name (754), BCA Non Bank Transfer (388)"
+      },
+      {
+        "theme": "Login & Access", "volume": 2883, "pctAll": 4.9,
+        "trend": "\u2193 Falling", "trendData": [1055, 841, 477, 510], "trendMonths": ["Oct", "Nov", "Dec", "Jan"],
+        "signalType": "Product Issue", "signalColor": "red",
+        "sources": "EmailCase: 1,138 | Email: 1,013 | Live Chat: 253",
+        "topItems": "App Login Issue (927), Inquiry OTP/PIN (729), Inquiry Login (519)"
+      },
+      {
+        "theme": "Deposit / Top-up", "volume": 2215, "pctAll": 3.8,
+        "trend": "\u2193 Falling", "trendData": [1028, 707, 231, 249], "trendMonths": ["Oct", "Nov", "Dec", "Jan"],
+        "signalType": "Mixed", "signalColor": "amber",
+        "sources": "Email: 757 | Live Chat: 645 | EmailCase: 368",
+        "topItems": "Inquiry Top Up Others (466), Inquiry Top Up General (267), Inquiry Top Up QRIS (262)"
+      },
+      {
+        "theme": "Device Verification", "volume": 1275, "pctAll": 2.2,
+        "trend": "\u2191 Rising", "trendData": [2, 468, 409, 396], "trendMonths": ["Oct", "Nov", "Dec", "Jan"],
+        "signalType": "Product Issue", "signalColor": "red",
+        "sources": "In-App: 498 | EmailCase: 355 | L1 Agent: 259",
+        "topItems": "New Device Verification General (617), New Device Manual Verification (496)"
+      },
+      {
+        "theme": "Play Store Feedback", "volume": 1188, "pctAll": 2.0,
+        "trend": "\u2193 Falling", "trendData": [453, 293, 270, 172], "trendMonths": ["Oct", "Nov", "Dec", "Jan"],
+        "signalType": "User Voice", "signalColor": "blue",
+        "sources": "Play Store: 1,188 (100%)",
+        "topItems": "Feedback Playstore (605), Feedback (583)"
+      },
+      {
+        "theme": "In-App Feedback", "volume": 581, "pctAll": 1.0,
+        "trend": "\u2193 Falling", "trendData": [469, 112, 0, 0], "trendMonths": ["Oct", "Nov", "Dec", "Jan"],
+        "signalType": "User Voice", "signalColor": "blue",
+        "sources": "In-App: 461 | Live Chat: 65 | Email: 46",
+        "topItems": "Feedback (581)"
+      },
+      {
+        "theme": "Security & Fraud", "volume": 446, "pctAll": 0.8,
+        "trend": "\u2193 Falling", "trendData": [0, 142, 178, 126], "trendMonths": ["Oct", "Nov", "Dec", "Jan"],
+        "signalType": "Product Issue", "signalColor": "red",
+        "sources": "EmailCase: 282 | L1 Agent: 95 | Live Chatbot Case: 15",
+        "topItems": "Unauthorized Activity (311), Account Hack (63), Security & License (31)"
+      },
+      {
+        "theme": "App Stability", "volume": 412, "pctAll": 0.7,
+        "trend": "\u2191 Rising", "trendData": [1, 13, 157, 241], "trendMonths": ["Oct", "Nov", "Dec", "Jan"],
+        "signalType": "Product Issue", "signalColor": "red",
+        "sources": "In-App: 381 | Play Store: 16 | EmailCase: 8",
+        "topItems": "Low App Rating (381), Keep Loading Issue (31)"
+      }
+    ],
+    "totalThemeVolume": 30704,
+    "totalThemePct": 52.1,
+    "insight": "30,704 tickets (52.1%) map to identifiable product feedback themes. The remaining 48% are either operational support, spam/duplicate (7.4%), unclassified (15%), or general inquiries. The two fastest-growing themes \u2014 Face Verification (+346%) and App Stability (new, 241 in Jan) \u2014 both emerged AFTER the Help Center launch and correlate with new app features, not support channel changes.",
+    "alerts": [
+      {"theme": "Face Verification / KYC", "change": "+346%", "detail": "700 \u2192 3,121 in 4 months"},
+      {"theme": "App Stability", "change": "NEW", "detail": "1 \u2192 241 \u2014 new and growing fast"}
+    ]
+  },
+  "playStore": {
+    "overview": {
+      "totalReviews": 1875,
+      "featuresSuggestionsPct": 64.3,
+      "uncategorizedPct": 63.4,
+      "monthlyTrend": [
+        {"month": "Oct 2025", "volume": 658},
+        {"month": "Nov 2025", "volume": 483},
+        {"month": "Dec 2025", "volume": 451},
+        {"month": "Jan 2026", "volume": 283}
+      ],
+      "trendNote": "Volume falling \u2014 BUT this could mean: (1) Fewer users leaving reviews (reduced engagement signal), (2) Improved app quality (positive signal), (3) Review ingestion pipeline issues (data quality signal)"
+    },
+    "subCategory": [
+      {"name": "Features & Suggestions", "value": 1205, "pct": 64.3},
+      {"name": "About Pluang (General)", "value": 67, "pct": 3.6},
+      {"name": "Application", "value": 57, "pct": 3.0},
+      {"name": "Spam", "value": 41, "pct": 2.2},
+      {"name": "Crypto Inquiry", "value": 34, "pct": 1.8},
+      {"name": "Cashout Method General", "value": 32, "pct": 1.7},
+      {"name": "Others Inquiry", "value": 31, "pct": 1.7},
+      {"name": "Login", "value": 30, "pct": 1.6},
+      {"name": "Top Up Inquiry", "value": 30, "pct": 1.6},
+      {"name": "Gold Transaction", "value": 29, "pct": 1.5},
+      {"name": "Other", "value": 319, "pct": 17.0}
+    ],
+    "itemsC": [
+      {"name": "Feedback Playstore", "value": 605, "pct": 32.3},
+      {"name": "Feedback", "value": 583, "pct": 31.1},
+      {"name": "Unclassified", "value": 72, "pct": 3.8},
+      {"name": "About Pluang", "value": 61, "pct": 3.3},
+      {"name": "Inquiry about Pluang", "value": 43, "pct": 2.3},
+      {"name": "Inquiry Cashout General", "value": 32, "pct": 1.7},
+      {"name": "App Login Issue", "value": 30, "pct": 1.6},
+      {"name": "Gold Price & Spread", "value": 21, "pct": 1.1},
+      {"name": "Keep Loading Issue", "value": 16, "pct": 0.9},
+      {"name": "Other (100+ items)", "value": 412, "pct": 22.0}
+    ],
+    "byCategory": [
+      {"category": "Inquiry", "count": 869, "pct": 46.3, "note": "General questions \u2014 583 are just 'Feedback'"},
+      {"category": "Other Issues (General)", "count": 710, "pct": 37.9, "note": "601 are 'Feedback Playstore' \u2014 no further detail"},
+      {"category": "Application", "count": 80, "pct": 4.3, "note": "Login (30), Keep Loading (16), Face Verification (7)"},
+      {"category": "Cashout", "count": 51, "pct": 2.7, "note": "Withdrawal complaints from reviews"},
+      {"category": "Asset Gold", "count": 32, "pct": 1.7, "note": "Gold pricing & spread concerns"},
+      {"category": "Asset Crypto", "count": 23, "pct": 1.2, "note": "Crypto pricing issues"},
+      {"category": "Top up", "count": 19, "pct": 1.0, "note": "Deposit method questions"},
+      {"category": "Other (10 more)", "count": 91, "pct": 4.9, "note": "Small categories"}
+    ],
+    "insight": "63.4% of Play Store reviews have no actionable categorization. \"Feedback Playstore\" and \"Feedback\" as Items__c values tell us nothing about WHAT the user is saying. These 1,188 reviews are ingested, assigned to agents, and closed \u2014 but the actual product feedback content is never extracted, categorized, or routed to product teams.",
+    "gap": {
+      "title": "MISSING: Play Store Review Sentiment Analysis",
+      "items": [
+        "Extract star ratings (available in Play Store API but not stored in SF)",
+        "Categorize review topics (what feature/issue the review discusses)",
+        "Track review-to-response time (how fast agents reply to reviews)",
+        "Measure response impact (does agent reply change user's rating?)",
+        "Route negative reviews to product teams for trend analysis"
+      ],
+      "note": "12,385 total Play Store reviews exist, but only 1,875 made it into SF as tickets. The other ~10,500 are not tracked at all."
+    }
+  },
+  "deepDives": {
+    "faceVerification": {
+      "title": "Face Verification / KYC \u2014 700 \u2192 3,121 tickets (+346%)",
+      "total": 7580, "pctAll": 12.9,
+      "monthly": [700, 1282, 2477, 3121],
+      "primaryItem": "Face Verification Failed \u2014 5,440 tickets (71.8% of theme)",
+      "channelBreakdown": [
+        {"channel": "In-App", "count": 4775, "pct": 63.0, "note": "Auto-created when face verification fails"},
+        {"channel": "EmailCase", "count": 1272, "pct": 16.8, "note": "Users emailing after failed verification"},
+        {"channel": "Email", "count": 753, "pct": 9.9, "note": "Legacy email workflow"},
+        {"channel": "L1 Agent", "count": 480, "pct": 6.3, "note": "Specialist manual verification"}
+      ],
+      "topSubItems": [
+        "Face Verification Failed: 5,440 (user's face scan rejected by system)",
+        "NIK Already Registered: 913 (national ID already used \u2014 possible duplicate or fraud)",
+        "Inquiry Basic Verification: 520 (users asking how to verify \u2014 confusing UX)",
+        "Verification Pending: 233 (waiting for manual review)",
+        "Invalid Selfie: 141 (selfie quality rejected)"
+      ],
+      "productImplication": "Face verification is a PRODUCT issue, not a support issue. The system rejects users, they create tickets, agents manually verify. This is 12.9% of all support volume caused by a single product feature. Fix: improve face detection algorithm, add real-time feedback during scan ('move closer', 'better lighting'), auto-retry before creating ticket.",
+      "costEstimate": "7,580 tickets \u00d7 ~10 min avg agent time = ~1,263 agent-hours/period. If face verification success rate improved from current to 90%+, est. 5,000+ tickets eliminated."
+    },
+    "appStability": {
+      "title": "App Stability \u2014 1 \u2192 241 tickets/month (emerged Dec 2025)",
+      "total": 412,
+      "monthly": [1, 13, 157, 241],
+      "composition": [
+        {"item": "Low App Rating", "count": 381, "note": "Auto-detected in-app low ratings \u2014 ALL from In-App channel"},
+        {"item": "Keep Loading", "count": 31, "note": "User-reported loading issues \u2014 Play Store + EmailCase"}
+      ],
+      "insight": "Low App Rating (381) is an auto-detection signal that ONLY appeared in Dec/Jan. Either: (a) the detection mechanism was newly implemented, or (b) app quality degraded. The timing correlates with HC launch and new app features. Either way, this is a leading indicator \u2014 241 low ratings in January alone.",
+      "recommendation": "Investigate: When was the Low App Rating auto-detection mechanism deployed? If new, this is a data collection improvement. If existing, the 157\u2192241 growth indicates real app quality degradation that needs engineering attention."
+    },
+    "accountManagement": {
+      "title": "Account Management \u2014 Largest theme, steadily growing",
+      "total": 8653, "pctAll": 14.7,
+      "monthly": [2017, 2162, 2201, 2273],
+      "topIssues": [
+        {"item": "Change Phone Number - Registered Number Inactive", "count": 1759, "note": "User's old phone number no longer works \u2014 can't receive OTP"},
+        {"item": "Wrong Input", "count": 814, "note": "Users entering incorrect data during account operations"},
+        {"item": "Pluang Account Deactivation", "count": 766, "note": "Users wanting to deactivate accounts \u2014 no self-service option"},
+        {"item": "Change Phone Number - New Number Already Registered", "count": 684, "note": "Migration path blocked \u2014 new number used by another account"},
+        {"item": "Change Phone Number - General", "count": 623, "note": "General phone number change requests"},
+        {"item": "Pluang Account Activation", "count": 561, "note": "Reactivation requests \u2014 no self-service option"},
+        {"item": "Delete Inactive Bank Account", "count": 423, "note": "Users can't manage their own bank accounts"},
+        {"item": "Change Phone Number - Forgot Data", "count": 416, "note": "Users who forgot their old credentials"},
+        {"item": "Reset Authenticator", "count": 371, "note": "2FA reset requires agent \u2014 no self-service"},
+        {"item": "Inquiry Change Username", "count": 368, "note": "Username change not available in app"}
+      ],
+      "productImplication": "8,653 tickets from users trying to manage their own accounts. Every single one of these is a self-service feature that doesn't exist in the app. Phone number change alone is 4,482 tickets (7.6% of ALL support volume). This is the highest-ROI product investment: build self-service account management and eliminate 8,000+ tickets/period.",
+      "recommendation": "Priority self-service features to build: (1) Phone number change with identity verification, (2) Account deactivation/reactivation flow, (3) Bank account management, (4) Authenticator reset, (5) Username change"
+    }
+  },
+  "dataQuality": {
+    "classification": [
+      {"label": "Classified (product themes)", "value": 30704, "pct": 52.1, "color": "#14B8A6"},
+      {"label": "Unclassified (Items__c empty/generic)", "value": 8860, "pct": 15.0, "color": "#EF4444"},
+      {"label": "Spam + Duplicate", "value": 4364, "pct": 7.4, "color": "#6B7280"},
+      {"label": "Operational (Ops items)", "value": 3829, "pct": 6.5, "color": "#9CA3AF"},
+      {"label": "General Inquiry (no product signal)", "value": 11200, "pct": 19.0, "color": "#F59E0B"}
+    ],
+    "noise": {
+      "spam": {"total": 3062, "sources": "EmailCase: 2,131 | Email: 878 | Other: 53", "note": "Spam emails auto-created as tickets \u2014 pure noise"},
+      "duplicate": {"total": 1302, "sources": "EmailCase: 540 | Email: 712 | Other: 50", "note": "Duplicate Ticket items \u2014 already counted in merge analysis"},
+      "unclassified": {"total": 8860, "pct": 15.0, "impact": "CRITICAL \u2014 15% of tickets have no Items__c classification. This is the largest single data quality issue. If even 20% of unclassified tickets contain product feedback, that's 1,772 missing signals."}
+    },
+    "recommendations": [
+      {"priority": "P0", "action": "Reduce Unclassified Rate", "detail": "8,860 tickets (15%) have Items__c = 'Unclassified'. Enforce mandatory Items__c selection before ticket close. Current classification happens during resolution \u2014 move it to triage so it's captured even if ticket is quick-closed.", "impact": "Recover ~1,800 product feedback signals per period"},
+      {"priority": "P0", "action": "Sub-categorize Play Store Reviews", "detail": "1,188 Play Store reviews are tagged 'Feedback Playstore' or 'Feedback' with no topic classification. Add a mandatory sub-topic field: App Performance, Feature Request, Pricing Complaint, Bug Report, Positive Feedback.", "impact": "Make 1,188 reviews actionable for product team"},
+      {"priority": "P1", "action": "Build Product Feedback Routing", "detail": "Currently, ALL feedback stays in CS. No mechanism to route product issues to product/engineering teams. Build a weekly digest that surfaces top themes + trend changes to product managers.", "impact": "Close the feedback loop \u2014 CS data becomes product input"},
+      {"priority": "P1", "action": "Add In-App Feedback Form", "detail": "There is no structured feedback form in the app. Users who want to give feedback must either write a Play Store review, contact support, or submit In-App 'Feedback' (which gets mixed with support requests). Add a dedicated feedback form with category selection.", "impact": "Separate product feedback from support requests at source"},
+      {"priority": "P2", "action": "Implement NPS / CSAT Post-Interaction", "detail": "No satisfaction survey exists for resolved product issues. Add a post-resolution NPS question for product-related tickets (Face Verification, Login, Account Management) to measure if the product fix actually helped.", "impact": "Create closed-loop measurement: issue detected \u2192 fix shipped \u2192 satisfaction measured"}
+    ]
+  }
+}

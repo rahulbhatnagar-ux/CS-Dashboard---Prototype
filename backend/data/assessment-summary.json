@@ -1,0 +1,63 @@
+{
+  "dimensions": [
+    {
+      "name": "Search Box",
+      "score": "D",
+      "status": "critical",
+      "keyFinding": "59.8% zero-result rate",
+      "priority": 1
+    },
+    {
+      "name": "Chatbot",
+      "score": "C-",
+      "status": "warning",
+      "keyFinding": "92.3% catch-all intents",
+      "priority": 2
+    },
+    {
+      "name": "Knowledge Base",
+      "score": "C",
+      "status": "warning",
+      "keyFinding": "87.6% articles under 5 views",
+      "priority": 3
+    },
+    {
+      "name": "RAG Retrieval",
+      "score": "D+",
+      "status": "critical",
+      "keyFinding": "0% feedback collection",
+      "priority": 4
+    },
+    {
+      "name": "Deflection",
+      "score": "B+",
+      "status": "good",
+      "keyFinding": "99.88% HC deflection rate",
+      "priority": 5
+    },
+    {
+      "name": "UX & Journeys",
+      "score": "C-",
+      "status": "warning",
+      "keyFinding": "15.6 avg turns before handoff",
+      "priority": 6
+    },
+    {
+      "name": "Escalation Quality",
+      "score": "C",
+      "status": "warning",
+      "keyFinding": "41.4% agent re-ask rate",
+      "priority": 7
+    },
+    {
+      "name": "Technical Health",
+      "score": "D+",
+      "status": "critical",
+      "keyFinding": "Bot_Transcript__c empty",
+      "priority": 8
+    }
+  ],
+  "overallGrade": "C-",
+  "_source": "Pluang_HC_Phase1_Assessment_Framework_Complete.xlsx",
+  "_processedAt": "2026-02-24T11:35:05.658Z"
+}

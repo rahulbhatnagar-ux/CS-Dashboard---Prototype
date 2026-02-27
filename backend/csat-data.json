@@ -1,0 +1,412 @@
+{
+  "overview": {
+    "hero": "CSAT measurement is fundamentally broken across digital channels. Chatbot — the primary customer entry point — has 0% CSAT response rate. The highest-volume channel (EmailCase at 16,786 tickets) gets only 2% feedback. We're flying blind on 83% of customer interactions.",
+    "surveyStats": {
+      "overallSent": 37759,
+      "overallResponses": 10956,
+      "overallRate": 29.0,
+      "chatbotSent": 4273,
+      "chatbotResponses": 0,
+      "chatbotRate": 0.0,
+      "emailCaseSent": 12008,
+      "emailCaseResponses": 246,
+      "emailCaseRate": 2.0,
+      "linkableCases": 9329
+    },
+    "channelSurvey": [
+      {"channel": "Instagram", "sent": null, "responses": 1711, "rate": null, "note": "Social engagement metrics"},
+      {"channel": "Live Chat", "sent": null, "responses": 1185, "rate": null, "note": "In-session widget"},
+      {"channel": "In-App", "sent": null, "responses": 960, "rate": null, "note": "In-app feedback"},
+      {"channel": "Phone", "sent": null, "responses": 207, "rate": null, "note": "Post-call IVR"},
+      {"channel": "EmailCase", "sent": 12008, "responses": 246, "rate": 2.0, "note": "Post-close survey"},
+      {"channel": "L1 Agent", "sent": 3353, "responses": 141, "rate": 4.2, "note": "Internal escalation"},
+      {"channel": "Help Center", "sent": null, "responses": 3, "rate": null, "note": "Effectively zero"},
+      {"channel": "Live Chatbot Case", "sent": 4273, "responses": 0, "rate": 0.0, "note": "BROKEN - Bug #14"}
+    ],
+    "instrumentationGap": [
+      {"channel": "EmailCase", "method": "Post-close survey", "scale": "Text (broken)", "responseRate": "2.0%", "status": "broken", "bug": "Bug #27: text not numeric"},
+      {"channel": "Live Chatbot Case", "method": "Post-close survey", "scale": "Text (broken)", "responseRate": "0.0%", "status": "broken", "bug": "Bug #14: not showing"},
+      {"channel": "Live Chat", "method": "In-session widget", "scale": "Thumbs up/down", "responseRate": "Moderate", "status": "partial", "bug": null},
+      {"channel": "In-App", "method": "In-app feedback", "scale": "1-5 scale", "responseRate": "Moderate", "status": "partial", "bug": null},
+      {"channel": "Phone", "method": "Post-call IVR", "scale": "1-5 scale", "responseRate": "Low", "status": "partial", "bug": null},
+      {"channel": "Instagram", "method": "Social response", "scale": "Engagement", "responseRate": "Highest", "status": "working", "bug": null},
+      {"channel": "KB Articles", "method": "Upvote/Downvote", "scale": "Binary", "responseRate": "75.6% positive", "status": "working", "bug": null},
+      {"channel": "Chatbot (in-bot)", "method": "None implemented", "scale": "N/A", "responseRate": "N/A", "status": "broken", "bug": "No measurement"},
+      {"channel": "Help Center", "method": "None", "scale": "N/A", "responseRate": "0 responses", "status": "broken", "bug": "No measurement"}
+    ],
+    "paradox": {
+      "reported": [
+        {"metric": "Bot Containment", "value": 91, "label": "91% Bot Containment"},
+        {"metric": "Article Upvote Rate", "value": 75.6, "label": "75.6% Article Upvote Rate"}
+      ],
+      "experienced": [
+        {"metric": "Bot Failure Phrases", "value": 67.7, "label": "67.7% Bot Failure Phrases"},
+        {"metric": "CSAT Response", "value": 0, "label": "0% CSAT Response"},
+        {"metric": "Avg Turns Before Agent", "value": 15.6, "label": "15.6 avg turns before agent"}
+      ],
+      "insight": "Surface metrics suggest satisfaction. Behavioral data reveals frustration."
+    }
+  },
+  "articleSatisfaction": {
+    "overall": {
+      "totalVotes": 3193,
+      "totalArticles": 369,
+      "upvoteRate": 75.6,
+      "upvotes": 2415,
+      "downvotes": 778,
+      "zeroVotePct": 64
+    },
+    "monthlyTrend": [
+      {"month": "2025-01", "total": 80, "up": 63, "down": 17, "positivePct": 79},
+      {"month": "2025-02", "total": 93, "up": 67, "down": 26, "positivePct": 72},
+      {"month": "2025-03", "total": 69, "up": 46, "down": 23, "positivePct": 67},
+      {"month": "2025-04", "total": 83, "up": 53, "down": 30, "positivePct": 64},
+      {"month": "2025-05", "total": 62, "up": 51, "down": 11, "positivePct": 82},
+      {"month": "2025-06", "total": 71, "up": 60, "down": 11, "positivePct": 85},
+      {"month": "2025-07", "total": 88, "up": 68, "down": 20, "positivePct": 77},
+      {"month": "2025-08", "total": 83, "up": 59, "down": 24, "positivePct": 71},
+      {"month": "2025-09", "total": 80, "up": 45, "down": 35, "positivePct": 56},
+      {"month": "2025-10", "total": 82, "up": 51, "down": 31, "positivePct": 62},
+      {"month": "2025-11", "total": 81, "up": 62, "down": 19, "positivePct": 77},
+      {"month": "2025-12", "total": 60, "up": 46, "down": 14, "positivePct": 77},
+      {"month": "2026-01", "total": 19, "up": 17, "down": 2, "positivePct": 89},
+      {"month": "2026-02", "total": 29, "up": 23, "down": 6, "positivePct": 79}
+    ],
+    "topBox": [
+      {"title": "Langkah-Langkah Melakukan Perubahan KTP di Pluang", "upPct": 100, "votes": 6},
+      {"title": "Menonaktifkan akun Pluang", "upPct": 100, "votes": 12},
+      {"title": "Informasi tentang reaktivasi akun Pluang", "upPct": 100, "votes": 6},
+      {"title": "Cara Klaim Hadiah dari Promo Referral", "upPct": 100, "votes": 10},
+      {"title": "Perubahan data pada KTP yang terdaftar", "upPct": 100, "votes": 12},
+      {"title": "Top up QRIS belum masuk", "upPct": 100, "votes": 6},
+      {"title": "Withdrawal menggunakan rekening bank", "upPct": 100, "votes": 5},
+      {"title": "Mengirim aset kripto ke Cold Wallet", "upPct": 100, "votes": 7},
+      {"title": "Penarikan Dana Status Ditolak", "upPct": 100, "votes": 5},
+      {"title": "Perubahan Username di Pluang", "upPct": 100, "votes": 5}
+    ],
+    "topBoxInsight": "Top box articles are specific, action-oriented procedures (KTP change, withdrawal steps, username change). Users are satisfied when content gives them clear steps to complete a task.",
+    "bottomBox": [
+      {"title": "Moving USDT from Margin Account to Spot Account", "downPct": 100, "votes": 6},
+      {"title": "Pengertian Withdrawable Cash (Saldo Yang Dapat Ditarik)", "downPct": 91, "votes": 11},
+      {"title": "Convert IDR - USD balance in Pluang App", "downPct": 80, "votes": 5},
+      {"title": "Moving USDT from Spot Wallet to Margin Wallet", "downPct": 80, "votes": 5},
+      {"title": "Spread Emas di Pluang", "downPct": 67, "votes": 6},
+      {"title": "Cara Mengirim dan Menerima Aset Kripto", "downPct": 62, "votes": 16},
+      {"title": "Memindahkan Saldo USDT dari Akun Margin ke Akun Spot", "downPct": 61, "votes": 23},
+      {"title": "Top Up Untuk Nominal Dibawah 10.000", "downPct": 60, "votes": 5},
+      {"title": "Tata Cara Migrasi Saldo Tokopedia Emas", "downPct": 57, "votes": 7},
+      {"title": "Definition of Withdrawable Cash on USD Margin", "downPct": 50, "votes": 10}
+    ],
+    "bottomBoxInsight": "Bottom box articles are conceptual explanations (what IS withdrawable cash?) or complex multi-step processes (USDT margin transfers). Users are dissatisfied when content explains concepts instead of solving problems.",
+    "quadrant": [
+      {"title": "Authenticator", "votes": 382, "positivePct": 79, "quadrant": "protect"},
+      {"title": "Bank Registration", "votes": 190, "positivePct": 83, "quadrant": "protect"},
+      {"title": "Operational Hours", "votes": 286, "positivePct": 96, "quadrant": "protect"},
+      {"title": "Phone Change", "votes": 122, "positivePct": 75, "quadrant": "fix"},
+      {"title": "Identity Verification", "votes": 66, "positivePct": 55, "quadrant": "fix"},
+      {"title": "Account Deactivation", "votes": 68, "positivePct": 66, "quadrant": "fix"},
+      {"title": "Cold Wallet", "votes": 7, "positivePct": 100, "quadrant": "leverage"},
+      {"title": "KTP Change", "votes": 6, "positivePct": 100, "quadrant": "leverage"},
+      {"title": "Referral", "votes": 10, "positivePct": 100, "quadrant": "leverage"},
+      {"title": "USDT Transfer", "votes": 6, "positivePct": 0, "quadrant": "rewrite"},
+      {"title": "Withdrawable Cash", "votes": 11, "positivePct": 9, "quadrant": "rewrite"},
+      {"title": "IDR-USD Convert", "votes": 5, "positivePct": 20, "quadrant": "rewrite"}
+    ]
+  },
+  "qualityScores": {
+    "overall": [
+      {"dimension": "Overall", "score": 6.62, "target": 7.50, "status": "below"},
+      {"dimension": "Accuracy", "score": 8.39, "target": 8.00, "status": "meets"},
+      {"dimension": "Clarity", "score": 7.42, "target": 7.50, "status": "borderline"},
+      {"dimension": "Completeness", "score": 6.15, "target": 7.00, "status": "below"},
+      {"dimension": "Usefulness", "score": 5.79, "target": 7.00, "status": "critical"}
+    ],
+    "overallInsight": "Accuracy is high (articles are factually correct) but Usefulness is critically low (articles don't help users actually DO anything). Content is correct but not actionable.",
+    "methodology": {
+      "summary": "175 Knowledge Base articles were evaluated using a structured AI rubric. Each article was scored on 4 dimensions on a 1-10 scale. The evaluation reads each article's question and answer, then scores against specific criteria. Scores were validated by the CS team \u2014 47 articles flagged for revision were re-evaluated using the same rubric, showing an average score change of -23.4% after closer review, confirming the initial scores were generous if anything.",
+      "dimensions": [
+        {
+          "name": "Accuracy",
+          "avg": 8.39,
+          "status": "meets",
+          "statusLabel": "Meets target",
+          "statusEmoji": "check",
+          "description": "Is the information factually correct? Does the answer contain errors, outdated information, or misleading claims?",
+          "scoring": "10 = Perfect accuracy, no errors. 7 = Minor inaccuracies. 5 = Some wrong information. Below 5 = Significantly wrong.",
+          "keyGap": "Articles are reviewed before publishing. The content IS correct \u2014 that's not the problem."
+        },
+        {
+          "name": "Clarity",
+          "avg": 7.42,
+          "status": "borderline",
+          "statusLabel": "Borderline",
+          "statusEmoji": "warning",
+          "description": "Is the answer easy to understand? Is the language clear, well-structured, and free of jargon?",
+          "scoring": "10 = Crystal clear, any user understands. 7 = Mostly clear with minor issues. 5 = Confusing structure or language. Below 5 = Hard to follow.",
+          "keyGap": "Long sentences, technical terms unexplained, no visual aids."
+        },
+        {
+          "name": "Completeness",
+          "avg": 6.15,
+          "status": "below",
+          "statusLabel": "Below target",
+          "statusEmoji": "warning",
+          "description": "Does the answer cover all aspects of the question? Are edge cases addressed? Are next steps included?",
+          "scoring": "10 = Covers everything including edge cases. 7 = Covers main points. 5 = Missing important aspects. Below 5 = Major gaps.",
+          "keyGap": "30.8% of articles score below 5. Articles answer the main question but miss follow-up scenarios (e.g., \"What if my withdrawal is rejected?\" covers reasons but not what to do next)."
+        },
+        {
+          "name": "Usefulness",
+          "avg": 5.79,
+          "status": "critical",
+          "statusLabel": "CRITICAL \u2014 Lowest dimension",
+          "statusEmoji": "critical",
+          "description": "Can a user actually SOLVE their problem using this article alone? Does it provide actionable steps, or just explain concepts?",
+          "scoring": "10 = User can fully self-serve after reading. 7 = Mostly actionable. 5 = Informational but requires additional help. Below 5 = Not actionable at all.",
+          "keyGap": "29.1% score below 5. This is the core finding: articles are accurate and mostly clear, but they don't help users DO anything. An article explaining \"what is withdrawable cash\" scores high on accuracy but low on usefulness because the user's real question is \"why can't I withdraw?\""
+        }
+      ],
+      "coreInsight": "The gap between Accuracy (8.39) and Usefulness (5.79) is the defining quality problem. Articles are factually correct \u2014 nobody is giving wrong information. But they explain concepts instead of solving problems. A user who reads \"What is Withdrawable Cash?\" and still can't withdraw needs a guided flow, not an explanation. This is why 87.6% of articles get fewer than 10 views \u2014 users visit once, don't get their problem solved, and leave.",
+      "sampleEvaluations": [
+        {
+          "type": "high",
+          "title": "How to Read Your Position?",
+          "category": "Asset Gold",
+          "overallScore": 8.8,
+          "scores": {"accuracy": 10.0, "clarity": 9.0, "completeness": 9.0, "usefulness": 8.0},
+          "reasoning": "Provides comprehensive information on how to read 'Posisi Kamu'. Covers menu location, information displayed, and meaning of each field.",
+          "suggestion": "Add step-by-step screenshots to help users navigate"
+        },
+        {
+          "type": "low",
+          "title": "Pengertian Withdrawable Cash",
+          "category": "Account Management",
+          "overallScore": 5.25,
+          "negativeVotePct": 91,
+          "scores": {"accuracy": 7, "clarity": 6, "completeness": 5, "usefulness": 3},
+          "reasoning": "Explains WHAT withdrawable cash IS but doesn't tell user HOW to check their balance, WHY theirs might be zero, or WHAT to do if it's wrong.",
+          "suggestion": "Convert from conceptual explanation to actionable troubleshooting guide"
+        }
+      ]
+    },
+    "byCategory": [
+      {"category": "Onboarding", "overall": 4.60, "n": 1},
+      {"category": "Topup", "overall": 4.70, "n": 3},
+      {"category": "Account Management", "overall": 5.16, "n": 34},
+      {"category": "Cashout", "overall": 5.73, "n": 3},
+      {"category": "Pockets", "overall": 5.88, "n": 3},
+      {"category": "Marketing Program", "overall": 6.21, "n": 6},
+      {"category": "Asset Options", "overall": 6.31, "n": 14},
+      {"category": "Asset Crypto", "overall": 7.06, "n": 14},
+      {"category": "Asset Gold", "overall": 7.12, "n": 13},
+      {"category": "Application", "overall": 7.13, "n": 15},
+      {"category": "Asset Mutual Fund", "overall": 7.13, "n": 16},
+      {"category": "Portfolio/Calculations", "overall": 7.19, "n": 12},
+      {"category": "Web Trading", "overall": 7.33, "n": 2},
+      {"category": "Asset Crypto Futures", "overall": 7.37, "n": 18},
+      {"category": "Asset US Stocks", "overall": 7.48, "n": 21}
+    ],
+    "categoryInsight": "Account Management (34 articles, score 5.16) and Topup (3 articles, score 4.70) are the worst categories \u2014 AND they map to the highest-volume ticket categories. Bad content quality directly drives ticket volume.",
+    "byLanguage": [
+      {"language": "English", "score": 6.41, "articles": 97, "gap": -0.46},
+      {"language": "Bahasa", "score": 6.87, "articles": 78, "gap": 0.25}
+    ],
+    "scoreDistribution": [
+      {"bucket": "Below 5.0", "count": 32, "pct": 18.3, "zone": "red"},
+      {"bucket": "5.0 - 6.49", "count": 43, "pct": 24.6, "zone": "amber"},
+      {"bucket": "6.5 - 7.49", "count": 28, "pct": 16.0, "zone": "amber"},
+      {"bucket": "7.5 - 8.49", "count": 42, "pct": 24.0, "zone": "green"},
+      {"bucket": "8.5+", "count": 30, "pct": 17.1, "zone": "green"}
+    ]
+  },
+  "channelSignals": {
+    "proxyDashboard": [
+      {"channel": "Live Chat", "directCSAT": "Moderate", "l2Rate": "0.9%", "resolutionRate": "98.8% closed", "repeatContact": "26.8% also email", "signal": "mixed"},
+      {"channel": "In-App", "directCSAT": "Moderate", "l2Rate": "4.3%", "resolutionRate": "45.9% closed", "repeatContact": "N/A", "signal": "low"},
+      {"channel": "EmailCase", "directCSAT": "2.0% resp", "l2Rate": "10.2%", "resolutionRate": "79.5% closed", "repeatContact": "High repeat", "signal": "low"},
+      {"channel": "Email (legacy)", "directCSAT": "N/A", "l2Rate": "0.2%", "resolutionRate": "94.0% closed", "repeatContact": "High ceremony", "signal": "acceptable"},
+      {"channel": "Phone", "directCSAT": "Low resp", "l2Rate": "0.0%", "resolutionRate": "100% closed", "repeatContact": "1.9% from LC", "signal": "high"},
+      {"channel": "Chatbot", "directCSAT": "0% resp", "l2Rate": "9.1%", "resolutionRate": "91% containment", "repeatContact": "67.7% failure", "signal": "critical"},
+      {"channel": "KB Articles", "directCSAT": "75.6% up", "l2Rate": "N/A", "resolutionRate": "N/A", "repeatContact": "87.6% <10 views", "signal": "mixed"}
+    ],
+    "l2Escalation": [
+      {"channel": "EmailCase", "rate": 10.2, "escalated": 1720, "total": 16786},
+      {"channel": "In-App", "rate": 4.3, "escalated": 303, "total": 7020},
+      {"channel": "Live Chat", "rate": 0.9, "escalated": 65, "total": 7540},
+      {"channel": "Email", "rate": 0.2, "escalated": 22, "total": 13440},
+      {"channel": "Phone", "rate": 0.0, "escalated": 0, "total": 6021}
+    ],
+    "l2Insight": "EmailCase has 10.2% L2 escalation \u2014 5x higher than the next channel. This is the NEW email channel (post-HC) where users have already tried self-service and failed.",
+    "channelSwitching": [
+      {"pattern": "Live Chat -> then also Emailed", "volume": 1599, "interpretation": "26.8% of LC users (highest cascade)"},
+      {"pattern": "HC Visit -> then Email", "volume": 628, "interpretation": "8.4% of email users tried HC first"},
+      {"pattern": "HC Visit -> then Phone", "volume": 250, "interpretation": "23.4% of phone users tried HC first"},
+      {"pattern": "Bot Failure -> then Escalated", "volume": 1146, "interpretation": "67% of escalators had bot failure first"}
+    ],
+    "resolutionStatus": [
+      {"channel": "EmailCase", "closed": 79.5, "l2": 10.2, "merged": 4.2, "waiting": 3.3, "inactive": 2.2, "other": 0.6},
+      {"channel": "Email", "closed": 94.0, "l2": 0.2, "merged": 4.5, "waiting": 0.8, "inactive": 0, "other": 0.5},
+      {"channel": "Live Chat", "closed": 98.8, "l2": 0.9, "merged": 0, "waiting": 0.3, "inactive": 0, "other": 0.0},
+      {"channel": "In-App", "closed": 45.9, "l2": 4.3, "merged": 0.4, "waiting": 49.3, "inactive": 0, "other": 0.1},
+      {"channel": "Phone", "closed": 100.0, "l2": 0.0, "merged": 0, "waiting": 0, "inactive": 0, "other": 0.0}
+    ]
+  },
+  "drivers": {
+    "satisfaction": [
+      {"rank": 1, "title": "Specific procedural content", "detail": "Articles with step-by-step instructions have 100% upvote (KTP change, withdrawal steps, username change)"},
+      {"rank": 2, "title": "Phone channel resolution", "detail": "100% closure rate, terminal resolution channel"},
+      {"rank": 3, "title": "Announcement/informational articles", "detail": "Operational hours (96% positive), Maintenance notices (94% positive)"},
+      {"rank": 4, "title": "Bahasa content", "detail": "Scores 6.87 vs English 6.41 on quality; language match improves satisfaction"},
+      {"rank": 5, "title": "Short bot sessions", "detail": "79.8% of bot sessions are <=4 turns, low-friction informational lookups"}
+    ],
+    "dissatisfaction": [
+      {"rank": 1, "title": "Chatbot failure cascade", "detail": "67.7% sessions hit failure, 52.8% get dead-end apology, 0% CSAT captured. The #1 dissatisfaction driver is invisible."},
+      {"rank": 2, "title": "Conceptual vs. actionable content", "detail": "Articles explaining \"what is X\" score 91% negative (Withdrawable Cash). Users want to DO something, not understand something."},
+      {"rank": 3, "title": "L2 escalation friction", "detail": "10.2% of EmailCase escalates to L2 (avg 3.3 day resolution). These users have already failed through bot -> live chat -> email."},
+      {"rank": 4, "title": "USDT/Margin transfer complexity", "detail": "100% negative satisfaction on USDT transfer articles. Complex multi-step crypto operations with no guided flow."},
+      {"rank": 5, "title": "Channel switching tax", "detail": "26.8% of Live Chat users also email. Each switch = repeated effort, lost context, compounded frustration."}
+    ],
+    "impactMatrix": [
+      {"driver": "Bot failure cascade", "volume": 10075, "impact": -90, "fixability": "Hard", "type": "dissatisfaction"},
+      {"driver": "Channel switching", "volume": 2477, "impact": -70, "fixability": "Medium", "type": "dissatisfaction"},
+      {"driver": "Conceptual articles", "volume": 778, "impact": -60, "fixability": "Easy", "type": "dissatisfaction"},
+      {"driver": "L2 escalation delay", "volume": 2153, "impact": -80, "fixability": "Medium", "type": "dissatisfaction"},
+      {"driver": "USDT complexity", "volume": 45, "impact": -95, "fixability": "Medium", "type": "dissatisfaction"},
+      {"driver": "Procedural articles", "volume": 2415, "impact": 85, "fixability": "Easy", "type": "satisfaction"},
+      {"driver": "Phone resolution", "volume": 6021, "impact": 70, "fixability": "Expensive", "type": "satisfaction"},
+      {"driver": "Bahasa content", "volume": 1200, "impact": 60, "fixability": "Easy", "type": "satisfaction"},
+      {"driver": "Short bot sessions", "volume": 11874, "impact": 40, "fixability": "N/A", "type": "satisfaction"}
+    ],
+    "crossTab": [
+      {"category": "Inquiry", "volume": 20882, "qualityScore": null, "upvoteRate": null, "l2Rate": "Mixed", "botFailure": "High", "signal": "critical"},
+      {"category": "Other Issues", "volume": 10153, "qualityScore": null, "upvoteRate": null, "l2Rate": "Mixed", "botFailure": "High", "signal": "critical"},
+      {"category": "Application", "volume": 8625, "qualityScore": 7.13, "upvoteRate": "79%", "l2Rate": "Low", "botFailure": "Medium", "signal": "mixed"},
+      {"category": "Account Management", "volume": 5685, "qualityScore": 5.16, "upvoteRate": "66%", "l2Rate": "High", "botFailure": "High", "signal": "critical"},
+      {"category": "Top up", "volume": 3227, "qualityScore": 4.70, "upvoteRate": "83%", "l2Rate": "Medium", "botFailure": "Medium", "signal": "mixed"},
+      {"category": "Onboarding", "volume": 2024, "qualityScore": 4.60, "upvoteRate": null, "l2Rate": "Medium", "botFailure": "High", "signal": "critical"},
+      {"category": "Asset Crypto", "volume": 1006, "qualityScore": 7.06, "upvoteRate": "72%", "l2Rate": "Low", "botFailure": "Medium", "signal": "mixed"},
+      {"category": "Cashout", "volume": 902, "qualityScore": 5.73, "upvoteRate": "87%", "l2Rate": "Low", "botFailure": "Low", "signal": "mixed"},
+      {"category": "Asset US Stocks", "volume": 840, "qualityScore": 7.48, "upvoteRate": "85%", "l2Rate": "Low", "botFailure": "Low", "signal": "good"},
+      {"category": "Asset Gold", "volume": 751, "qualityScore": 7.12, "upvoteRate": "82%", "l2Rate": "Low", "botFailure": "Low", "signal": "good"}
+    ]
+  },
+  "cesHypothesis": {
+    "hypothesis": "Customer Effort Score (CES) \u2014 measured by channel switches, repeat contacts, and resolution duration \u2014 is a deterministic driver of satisfaction outcomes. Higher effort \u2192 lower satisfaction signals, more escalations, and higher cost-to-serve.",
+    "whyItMatters": "If CES causes CSAT decline (not just correlates), then improving effort at entry points automatically improves satisfaction everywhere downstream. You don't need to \"fix CSAT\" \u2014 you fix effort, and CSAT follows.",
+    "populationTable": [
+      {"tier": "CES 0", "users": 170773, "pct": "93.1%", "avgChannels": 0.2, "l2Rate": "N/A", "channelSwitch": "None", "botFailure": "N/A", "articleDownvote": "N/A", "signal": "green", "signalLabel": "No contact needed"},
+      {"tier": "CES 0.1\u20131", "users": 710, "pct": "0.4%", "avgChannels": 1.0, "l2Rate": "Low", "channelSwitch": "None", "botFailure": "Low", "articleDownvote": "Low", "signal": "green", "signalLabel": "Single-touch resolve"},
+      {"tier": "CES 1.1\u20133", "users": 4400, "pct": "2.4%", "avgChannels": 1.4, "l2Rate": "~3%", "channelSwitch": "Minimal", "botFailure": "Present", "articleDownvote": "Mixed", "signal": "amber", "signalLabel": "Minor friction"},
+      {"tier": "CES 3.1\u20136", "users": 2531, "pct": "1.4%", "avgChannels": 1.5, "l2Rate": "~8%", "channelSwitch": "1 switch", "botFailure": "Likely", "articleDownvote": "Higher", "signal": "amber", "signalLabel": "Moderate friction"},
+      {"tier": "CES 6.1\u201310", "users": 3364, "pct": "1.8%", "avgChannels": 1.4, "l2Rate": "~15%", "channelSwitch": "1-2 switches", "botFailure": "Very likely", "articleDownvote": "High", "signal": "red", "signalLabel": "High effort"},
+      {"tier": "CES 10\u201315", "users": 1332, "pct": "0.7%", "avgChannels": 2.1, "l2Rate": "~25%", "channelSwitch": "2+ switches", "botFailure": "Nearly all", "articleDownvote": "Highest", "signal": "red", "signalLabel": "Very high effort"},
+      {"tier": "CES 15+", "users": 286, "pct": "0.2%", "avgChannels": 2.8, "l2Rate": "~40%", "channelSwitch": "3+ switches", "botFailure": "Nearly all", "articleDownvote": "N/A (abandoned)", "signal": "red", "signalLabel": "Extreme \u2014 likely churned"}
+    ],
+    "totalUsersScored": 183396,
+    "proofPoints": [
+      {
+        "title": "Effort Drives Escalation",
+        "detail": "Users with CES > 10 have 2.1 avg channels and 4.6 avg touchpoints. Their L2 escalation rate is estimated at 25% vs 3% for CES 1-3 users. This is an 8\u00d7 multiplier \u2014 not a correlation, a cascade: each failed channel attempt mechanically creates the next one."
+      },
+      {
+        "title": "Channel Switching = Effort Made Visible",
+        "detail": "1,599 Live Chat users (26.8%) also emailed. 628 HC visitors later emailed. 250 HC visitors later phoned. Each switch is a FAILED resolution in the previous channel. The switch IS the dissatisfaction signal \u2014 you don't need a survey to detect it."
+      },
+      {
+        "title": "Bot Failure Creates Downstream Effort",
+        "detail": "67.7% of bot sessions hit failure phrases. Of users who escalated to agents, 67% had bot failure first. The bot adds 15.6 turns of friction before handoff. This is effort injected at the entry point that cascades through every downstream channel."
+      },
+      {
+        "title": "High-Effort Categories = Highest Ticket Volume",
+        "detail": "Top high-effort categories: Inquiry (35.4% of volume, CES unmeasurable due to no sub-categorization), Account Management (9.6%, quality score 5.16), Application (14.6%), Top Up (5.5%, quality score 4.70). The categories generating the most effort are also the ones with the lowest article quality scores."
+      }
+    ],
+    "feedbackLoop": [
+      {"step": 1, "label": "Bad Article Quality", "detail": "5.79 usefulness score"},
+      {"step": 2, "label": "Search Fails", "detail": "59.8% zero-result rate"},
+      {"step": 3, "label": "Bot Fails", "detail": "67.7% failure phrase rate"},
+      {"step": 4, "label": "Escalation", "detail": "15.6 avg turns before handoff"},
+      {"step": 5, "label": "Email/Phone", "detail": "Channel switch = repeated effort"},
+      {"step": 6, "label": "L2 Escalation", "detail": "10.2% EmailCase L2 rate"},
+      {"step": 7, "label": "Jira/CTI", "detail": "3.3 day avg resolution"},
+      {"step": 8, "label": "Low Satisfaction", "detail": "Unmeasured!"},
+      {"step": 9, "label": "No Feedback Signal", "detail": "0% chatbot CSAT"},
+      {"step": 10, "label": "No Content Improvement", "detail": "Loop continues undetected"}
+    ],
+    "feedbackLoopLabel": "The Effort-Dissatisfaction Loop: Each stage creates effort that compounds into the next. CSAT measurement gaps at every stage mean the loop runs undetected.",
+    "actions": [
+      {
+        "title": "Fix Effort at Entry Points, Not Exit Points",
+        "detail": "Improving email handling time doesn't help if 67% of email volume is overflow from upstream failures. Fix search (59.8% zero-result) and bot (67.7% failure) first \u2014 email volume drops automatically."
+      },
+      {
+        "title": "CES as Leading Indicator, CSAT as Lagging",
+        "detail": "CES can be measured TODAY from behavioral data (channels, touchpoints, duration) without any survey. CSAT requires fixing Bugs #14 and #27 first. Use CES as the operational metric now; add CSAT as validation later."
+      },
+      {
+        "title": "Category-Level Effort Targeting",
+        "detail": "Account Management (quality 5.16) and Topup (quality 4.70) are the worst categories on both quality AND effort. Rewriting these 37 articles with actionable step-by-step content is the highest-ROI CSAT improvement available."
+      }
+    ]
+  },
+  "recommendations": [
+    {"priority": "P0", "title": "Fix Bug #14: Enable chatbot CSAT", "detail": "0% response rate on the primary entry point. Until this works, bot performance is unmeasured. Estimated impact: 14,875 sessions/period gain voice of customer."},
+    {"priority": "P0", "title": "Fix Bug #27: Convert CSAT to numeric", "detail": "Survey responses captured as text, not numeric values. Cannot compute CSAT scores. Blocks all quantitative satisfaction analysis."},
+    {"priority": "P1", "title": "Implement unified CSAT scale", "detail": "Current mix of thumbs, 1-5, upvote, and text makes cross-channel comparison impossible. Recommend: standardize on 1-5 numeric + optional comment across all touchpoints."},
+    {"priority": "P1", "title": "Rewrite bottom-box articles", "detail": "11 articles with >50% negative satisfaction. Convert conceptual explanations to step-by-step procedures. Quick win: USDT transfers, Withdrawable Cash, IDR-USD conversion."},
+    {"priority": "P2", "title": "Build Article Impact Score", "detail": "AIS = Retrieval Volume x Failure Rate. CS team has already designed this metric (SF Feedback Tracker). Implementation requires: retrieval tracking, failure signal capture, article-to-intent mapping."},
+    {"priority": "P2", "title": "Enable CSAT collection for Help Center", "detail": "Only 3 responses ever. Add post-visit satisfaction prompt after article view or search completion."}
+  ],
+  "gapInventory": {
+    "summary": {"broken": 4, "inconsistent": 3, "linkage": 4, "analysis": 4, "total": 15},
+    "categories": [
+      {
+        "key": "broken",
+        "label": "Instrumentation Broken",
+        "color": "#EF4444",
+        "sublabel": "critical \u2014 data not collected",
+        "gaps": [
+          {"id": 1, "title": "Bug #14: Chatbot CSAT not displaying to users", "detail": "0% response rate on primary entry point"},
+          {"id": 2, "title": "Bug #27: Survey responses stored as text not numeric", "detail": "Cannot compute CSAT scores for any channel using this survey"},
+          {"id": 3, "title": "Help Center has no satisfaction mechanism", "detail": "47,000 visits with zero feedback"},
+          {"id": 4, "title": "In-bot satisfaction: No post-conversation rating implemented", "detail": "Bot quality completely unmeasured"}
+        ]
+      },
+      {
+        "key": "inconsistent",
+        "label": "Measurement Inconsistent",
+        "color": "#F59E0B",
+        "sublabel": "partial \u2014 data exists but incomparable",
+        "gaps": [
+          {"id": 5, "title": "Scale mismatch: Thumbs (Live Chat) vs 1-5 (In-App/Phone) vs Text (Email) vs Binary (KB)", "detail": "Cannot compare satisfaction across channels"},
+          {"id": 6, "title": "Survey trigger inconsistency: Some channels survey on close, others on resolve, others never", "detail": "Response rates reflect trigger timing, not satisfaction"},
+          {"id": 7, "title": "No survey for contained bot sessions", "detail": "Only escalated users get surveyed, biasing results toward already-frustrated users"}
+        ]
+      },
+      {
+        "key": "linkage",
+        "label": "Linkage Gaps",
+        "color": "#3B82F6",
+        "sublabel": "data exists separately but can't be joined",
+        "gaps": [
+          {"id": 8, "title": "35% of cases lack Pluang User ID", "detail": "Cannot connect satisfaction to user journey or CES"},
+          {"id": 9, "title": "Article votes not linked to user profiles", "detail": "Cannot determine if satisfied article readers avoid tickets"},
+          {"id": 10, "title": "Bot session ID not linked to subsequent SF case", "detail": "Cannot measure satisfaction delta from bot to agent"},
+          {"id": 11, "title": "No resolution-moment timestamp", "detail": "Cannot measure time-to-satisfaction, only time-to-close"}
+        ]
+      },
+      {
+        "key": "analysis",
+        "label": "Analysis Gaps",
+        "color": "#94A3B8",
+        "sublabel": "data is collectable but analysis doesn't exist yet",
+        "gaps": [
+          {"id": 12, "title": "No Article Impact Score (AIS)", "detail": "CS team designed the formula but none of the 13 required metrics exist"},
+          {"id": 13, "title": "No intent-to-article mapping", "detail": "Cannot measure whether the RIGHT article was surfaced"},
+          {"id": 14, "title": "No cohort tracking", "detail": "Cannot tell if a user who saw an article later created a ticket about the same topic"},
+          {"id": 15, "title": "No CSAT-to-category attribution", "detail": "9,329 survey responses are linkable to SF tickets but this join hasn't been operationalized"}
+        ]
+      }
+    ]
+  }
+}

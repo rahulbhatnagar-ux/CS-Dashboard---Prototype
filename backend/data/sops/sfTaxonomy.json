@@ -1,0 +1,100 @@
+{
+  "version": "1.0",
+  "description": "Pluang Salesforce Case Taxonomy — L1/L2/L3 mapping",
+  "categories": [
+    {
+      "l1": "Account Management",
+      "sub_categories": [
+        { "l2": "Change Phone Number", "items": ["Change Phone Number - Registered Number Inactive", "Change Phone Number - New Number Already Registered", "Change Phone Number General"] },
+        { "l2": "Change/Delete Bank Account", "items": ["BCA Name Not Unique", "Change Bank Account", "Delete Bank Account"] },
+        { "l2": "PIN", "items": ["PIN Reset", "PIN Locked", "PIN Change", "Wrong Input"] },
+        { "l2": "Login", "items": ["App Login Issue", "OTP Issue", "Face Verification Failed"] },
+        { "l2": "Pluang Account Activation/Deactivation", "items": ["Pluang Account Activation", "Pluang Account Deactivation"] },
+        { "l2": "Change User Name", "items": ["Change User Name"] },
+        { "l2": "Basic Verification", "items": ["NIK Already Registered", "Basic Verification General"] },
+        { "l2": "Bank Verification", "items": ["Bank Verification"] },
+        { "l2": "New Device Verification", "items": ["New Device Manual Verification", "New Device Verification General"] }
+      ]
+    },
+    {
+      "l1": "Top up",
+      "sub_categories": [
+        { "l2": "Direct BCA Refund", "items": ["Direct BCA Refund"] },
+        { "l2": "Direct BCA Ops Checking", "items": ["Direct BCA Ops Checking"] },
+        { "l2": "Top Up General", "items": ["Top Up Failed", "Top Up Pending"] }
+      ]
+    },
+    {
+      "l1": "Cashout",
+      "sub_categories": [
+        { "l2": "Cashout General", "items": ["Cashout Failed", "Cashout Pending", "Cashout Tax & Fees"] }
+      ]
+    },
+    {
+      "l1": "Application",
+      "sub_categories": [
+        { "l2": "Features & Suggestions", "items": ["Features & Suggestions"] },
+        { "l2": "Reports", "items": ["Reports"] },
+        { "l2": "Application General", "items": ["Application Bug", "Application Crash"] }
+      ]
+    },
+    {
+      "l1": "Asset Crypto",
+      "sub_categories": [
+        { "l2": "Crypto Transaction", "items": ["Buy/Sell Issue", "Crypto Send/Receive"] },
+        { "l2": "Crypto General", "items": ["Crypto Price", "Crypto Wallet"] }
+      ]
+    },
+    {
+      "l1": "Asset US Stocks",
+      "sub_categories": [
+        { "l2": "US Stocks Transaction", "items": ["Buy/Sell Issue", "USD Transaction", "Dividend"] },
+        { "l2": "US Stocks General", "items": ["US Stocks Others"] }
+      ]
+    },
+    {
+      "l1": "Asset Gold",
+      "sub_categories": [
+        { "l2": "Gold Transaction", "items": ["Buy/Sell Issue", "Gold Redemption"] }
+      ]
+    },
+    {
+      "l1": "Asset Mutual Fund",
+      "sub_categories": [
+        { "l2": "MF Transaction", "items": ["Buy/Sell Issue", "MF Redemption"] }
+      ]
+    },
+    {
+      "l1": "Asset Crypto Futures",
+      "sub_categories": [
+        { "l2": "Crypto Futures Transaction", "items": ["Buy/Sell Issue", "Margin Call", "Liquidation"] },
+        { "l2": "Crypto Futures Wallet", "items": ["USDT Transfer", "Wallet Balance"] }
+      ]
+    },
+    {
+      "l1": "Other Issues (General)",
+      "sub_categories": [
+        { "l2": "Spam", "items": ["Spam Email", "Duplicate Ticket"] },
+        { "l2": "General Inquiry", "items": ["Unclassified", "General Issue"] }
+      ]
+    },
+    {
+      "l1": "Onboarding",
+      "sub_categories": [
+        { "l2": "Onboarding General", "items": ["KYC Issue", "Registration Issue"] }
+      ]
+    },
+    {
+      "l1": "Security & Fraud",
+      "sub_categories": [
+        { "l2": "Fraud Report", "items": ["Unauthorized Transaction", "Account Takeover"] }
+      ]
+    },
+    {
+      "l1": "Marketing Program",
+      "sub_categories": [
+        { "l2": "Promo & Rewards", "items": ["Referral Issue", "Promo Code Issue"] }
+      ]
+    }
+  ]
+}

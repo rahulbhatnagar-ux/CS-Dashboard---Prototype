@@ -1,0 +1,49 @@
+{
+  "totalSessions": 14875,
+  "totalMessages": 51266,
+  "avgTurnsPerSession": 3.45,
+  "intentDistribution": [
+    {
+      "name": "query",
+      "count": 12214,
+      "pct": 47.6
+    },
+    {
+      "name": "account_issue",
+      "count": 11453,
+      "pct": 44.7
+    },
+    {
+      "name": "complaint",
+      "count": 1391,
+      "pct": 5.4
+    },
+    {
+      "name": "follow_up",
+      "count": 207,
+      "pct": 0.8
+    },
+    {
+      "name": "greeting",
+      "count": 168,
+      "pct": 0.7
+    },
+    {
+      "name": "clarification",
+      "count": 109,
+      "pct": 0.4
+    },
+    {
+      "name": "feature_request",
+      "count": 91,
+      "pct": 0.4
+    }
+  ],
+  "sessionsWithEscalation": 0,
+  "escalationRate": 0,
+  "failurePhrases": [],
+  "failurePhraseRate": 0,
+  "botToAgentRate": 0,
+  "_source": "Chat_transcripts_chatbot_only.xlsx",
+  "_processedAt": "2026-02-24T11:34:49.581Z"
+}

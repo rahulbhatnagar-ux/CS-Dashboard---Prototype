@@ -1,0 +1,438 @@
+{
+  "totalSessions": 14875,
+  "totalMessages": 51266,
+  "totalBotResponses": 25633,
+  "avgSessionDepth": 3.45,
+  "detectors": {
+    "failure": {
+      "count": 12048,
+      "rate": 81
+    },
+    "deadEnd": {
+      "count": 8595,
+      "rate": 57.8
+    },
+    "frustration": {
+      "count": 4129,
+      "rate": 27.8
+    },
+    "loop": {
+      "count": 1002,
+      "rate": 6.7
+    },
+    "escalation": {
+      "count": 1410,
+      "rate": 9.5
+    },
+    "resolution": {
+      "count": 7873,
+      "rate": 52.9
+    },
+    "verbose": {
+      "count": 7734,
+      "rate": 52
+    }
+  },
+  "botResponseClassification": {
+    "apologyRedirect": {
+      "count": 8781,
+      "pct": 34.3
+    },
+    "apologyOnly": {
+      "count": 3449,
+      "pct": 13.5
+    },
+    "structuredOptions": {
+      "count": 18406,
+      "pct": 71.8
+    },
+    "resolutionPhrases": {
+      "count": 10558,
+      "pct": 41.2
+    },
+    "verbose": {
+      "count": 13408,
+      "pct": 52.3
+    }
+  },
+  "intentCrossTab": [
+    {
+      "intent": "account_issue",
+      "sessions": 8127,
+      "pctTotal": 54.6,
+      "failureRate": 90,
+      "deadEndRate": 66,
+      "frustrationRate": 32,
+      "loopRate": 7,
+      "escalationRate": 9,
+      "resolutionRate": 57
+    },
+    {
+      "intent": "query",
+      "sessions": 5954,
+      "pctTotal": 40,
+      "failureRate": 68,
+      "deadEndRate": 47,
+      "frustrationRate": 20,
+      "loopRate": 6,
+      "escalationRate": 10,
+      "resolutionRate": 47
+    },
+    {
+      "intent": "complaint",
+      "sessions": 621,
+      "pctTotal": 4.2,
+      "failureRate": 94,
+      "deadEndRate": 63,
+      "frustrationRate": 51,
+      "loopRate": 8,
+      "escalationRate": 9,
+      "resolutionRate": 55
+    },
+    {
+      "intent": "greeting",
+      "sessions": 91,
+      "pctTotal": 0.6,
+      "failureRate": 52,
+      "deadEndRate": 32,
+      "frustrationRate": 24,
+      "loopRate": 11,
+      "escalationRate": 32,
+      "resolutionRate": 36
+    },
+    {
+      "intent": "feature_request",
+      "sessions": 45,
+      "pctTotal": 0.3,
+      "failureRate": 62,
+      "deadEndRate": 36,
+      "frustrationRate": 22,
+      "loopRate": 7,
+      "escalationRate": 4,
+      "resolutionRate": 64
+    },
+    {
+      "intent": "follow_up",
+      "sessions": 27,
+      "pctTotal": 0.2,
+      "failureRate": 89,
+      "deadEndRate": 52,
+      "frustrationRate": 19,
+      "loopRate": 7,
+      "escalationRate": 11,
+      "resolutionRate": 63
+    },
+    {
+      "intent": "clarification",
+      "sessions": 10,
+      "pctTotal": 0.1,
+      "failureRate": 60,
+      "deadEndRate": 10,
+      "frustrationRate": 10,
+      "loopRate": 0,
+      "escalationRate": 0,
+      "resolutionRate": 0
+    }
+  ],
+  "topFailureResponses": [
+    {
+      "text": "Maaf, saya tidak dapat menemukan informasi yang relevan untuk pertanyaan Anda. Bisakah Anda mengulang pertanyaan atau me",
+      "count": 1715
+    },
+    {
+      "text": "Mohon maaf atas ketidaknyamanan yang Anda alami. Saya akan membantu Anda menyelesaikan masalah ini.\n\nApabila setelah 1x2",
+      "count": 143
+    },
+    {
+      "text": "Mohon maaf, saya tidak dapat membantu Anda untuk mengubah PIN Anda di aplikasi Pluang. Berdasarkan informasi yang ada di",
+      "count": 82
+    },
+    {
+      "text": "Baik, saya dapat membantu Anda untuk menonaktifkan akun Pluang Anda. Berikut adalah langkah-langkahnya:\n\n1. Masuk ke men",
+      "count": 68
+    },
+    {
+      "text": "Baik, saya dapat membantu Anda untuk mengubah nomor telepon yang terdaftar di akun Pluang Anda. Berikut adalah langkah-l",
+      "count": 66
+    },
+    {
+      "text": "Baik, saya dapat membantu Anda untuk mengaktifkan kembali akun Pluang yang telah dinonaktifkan. Berikut adalah langkah-l",
+      "count": 65
+    },
+    {
+      "text": "Mohon maaf atas kendala yang Anda alami saat login ke aplikasi Pluang. Saya akan membantu Anda mengatasi masalah ini.\n\nU",
+      "count": 59
+    },
+    {
+      "text": "Baik, saya dapat membantu Anda dengan proses menghapus akun Pluang Anda. Berikut adalah langkah-langkahnya:\n\n1. Masuk ke",
+      "count": 49
+    },
+    {
+      "text": "Mohon maaf atas ketidaknyamanan yang Anda alami. Saya akan membantu Anda menyelesaikan masalah ini.\n\nBerdasarkan informa",
+      "count": 49
+    },
+    {
+      "text": "Mohon maaf atas ketidaknyamanan yang Anda alami. Saya akan membantu Anda menyelesaikan masalah ini.\n\nApabila setelah 24",
+      "count": 37
+    },
+    {
+      "text": "Mohon maaf, saya memahami frustrasimu karena tidak dapat mengubah PIN di aplikasi Pluang. Berikut beberapa langkah yang",
+      "count": 35
+    },
+    {
+      "text": "Baik, saya dapat membantu Anda mengaktifkan kembali akun Pluang yang telah dinonaktifkan. Berikut adalah langkah-langkah",
+      "count": 34
+    },
+    {
+      "text": "Baik, saya dapat membantu Anda untuk mengubah alamat email yang terdaftar di akun Pluang Anda.\n\nBerikut langkah-langkahn",
+      "count": 32
+    },
+    {
+      "text": "Mohon maaf atas ketidaknyamanan yang Anda alami. Saya akan membantu Anda menyelesaikan masalah ini.\n\nJika setelah 1x24 j",
+      "count": 31
+    },
+    {
+      "text": "Mohon maaf atas ketidaknyamanan yang Anda alami. Saya akan berusaha membantu Anda semaksimal mungkin.\n\nTerkait dengan pe",
+      "count": 30
+    },
+    {
+      "text": "I apologize, but I couldn't find relevant information for your question. Could you please rephrase your question or cont",
+      "count": 26
+    },
+    {
+      "text": "Mohon maaf atas ketidaknyamanan yang Anda alami. Saya akan berusaha membantu Anda semaksimal mungkin.\n\nBerdasarkan infor",
+      "count": 24
+    },
+    {
+      "text": "Mohon maaf, untuk transaksi pembelian ataupun penjualan reksadana yang telah dilakukan melalui aplikasi Pluang tidak dap",
+      "count": 24
+    },
+    {
+      "text": "Baik, saya dapat membantu Anda untuk menghapus rekening bank yang terdaftar di akun Pluang Anda.\n\nUntuk menghapus rekeni",
+      "count": 23
+    },
+    {
+      "text": "Mohon maaf atas ketidaknyamanan yang Anda alami. Berikut adalah langkah-langkah yang dapat Anda lakukan:\n\n1. Pastikan An",
+      "count": 23
+    }
+  ],
+  "topSearchQueries": [
+    {
+      "query": "lupa pin akun pluang",
+      "count": 157
+    },
+    {
+      "query": "tidak bisa login akun pluang",
+      "count": 126
+    },
+    {
+      "query": "cara menghapus akun pluang",
+      "count": 125
+    },
+    {
+      "query": "hapus akun pluang",
+      "count": 77
+    },
+    {
+      "query": "live chat",
+      "count": 33
+    },
+    {
+      "query": "live chat pluang",
+      "count": 29
+    },
+    {
+      "query": "cara ganti email akun pluang",
+      "count": 27
+    },
+    {
+      "query": "akun terblokir pluang",
+      "count": 25
+    },
+    {
+      "query": "cara ganti nomor hp di pluang",
+      "count": 23
+    },
+    {
+      "query": "lupa password akun pluang",
+      "count": 22
+    },
+    {
+      "query": "cara reset pin pluang",
+      "count": 22
+    },
+    {
+      "query": "cara login pluang",
+      "count": 22
+    },
+    {
+      "query": "deposit tidak masuk ke akun pluang",
+      "count": 22
+    },
+    {
+      "query": "cara menarik saldo pluang",
+      "count": 22
+    },
+    {
+      "query": "cara mengaktifkan kembali akun pluang",
+      "count": 19
+    },
+    {
+      "query": "cara ganti nomor telepon di pluang",
+      "count": 19
+    },
+    {
+      "query": "cara menghapus rekening bank di pluang",
+      "count": 19
+    },
+    {
+      "query": "menghapus akun pluang",
+      "count": 19
+    },
+    {
+      "query": "deposit belum masuk pluang",
+      "count": 18
+    },
+    {
+      "query": "tidak bisa masuk akun pluang",
+      "count": 18
+    },
+    {
+      "query": "proses penarikan dana pluang",
+      "count": 16
+    },
+    {
+      "query": "cara mengubah nama akun pluang",
+      "count": 15
+    },
+    {
+      "query": "cara mengubah email akun pluang",
+      "count": 15
+    },
+    {
+      "query": "cara menarik dana dari pluang",
+      "count": 15
+    },
+    {
+      "query": "cara mengganti email akun pluang",
+      "count": 15
+    },
+    {
+      "query": "cara mengaktifkan akun pluang",
+      "count": 14
+    },
+    {
+      "query": "tarik saldo",
+      "count": 13
+    },
+    {
+      "query": "chat cs",
+      "count": 13
+    },
+    {
+      "query": "ubah nama akun pluang",
+      "count": 12
+    },
+    {
+      "query": "mengubah nama akun pluang",
+      "count": 12
+    },
+    {
+      "query": "reset pin pluang",
+      "count": 12
+    },
+    {
+      "query": "tidak bisa tarik saldo pluang",
+      "count": 12
+    },
+    {
+      "query": "cara masuk akun pluang",
+      "count": 12
+    },
+    {
+      "query": "hapus akun",
+      "count": 12
+    },
+    {
+      "query": "cara login akun pluang",
+      "count": 12
+    },
+    {
+      "query": "cara ganti nama akun pluang",
+      "count": 12
+    },
+    {
+      "query": "menonaktifkan akun pluang",
+      "count": 11
+    },
+    {
+      "query": "top up belum masuk",
+      "count": 11
+    },
+    {
+      "query": "cara mengubah nomor telepon di pluang",
+      "count": 11
+    },
+    {
+      "query": "ya",
+      "count": 11
+    },
+    {
+      "query": "tidak bisa tarik saldo",
+      "count": 11
+    },
+    {
+      "query": "cara mengatasi lupa pin pluang",
+      "count": 10
+    },
+    {
+      "query": "ganti nomor telepon pluang",
+      "count": 10
+    },
+    {
+      "query": "cara ganti pin akun pluang",
+      "count": 10
+    },
+    {
+      "query": "saldo belum masuk pluang",
+      "count": 10
+    },
+    {
+      "query": "cs",
+      "count": 10
+    },
+    {
+      "query": "cara mengganti nomor telepon di akun pluang",
+      "count": 10
+    },
+    {
+      "query": "tidak bisa top up pluang",
+      "count": 10
+    },
+    {
+      "query": "cara hapus akun pluang",
+      "count": 10
+    },
+    {
+      "query": "tidak bisa menarik saldo pluang",
+      "count": 9
+    }
+  ],
+  "scoreDistribution": {
+    "0-1": 232,
+    "2-3": 1706,
+    "4-5": 4382,
+    "6-7": 4496,
+    "8-10": 4059
+  },
+  "sfMapping": {
+    "totalSFSessions": 24471,
+    "botOnly": 22372,
+    "botAndAgent": 2048,
+    "agentOnly": 51,
+    "withCaseNumber": 2408,
+    "withEmail": 18714
+  },
+  "_source": "Chat_transcripts_chatbot_only.xlsx",
+  "_processedAt": "2026-02-24T17:46:46.256Z"
+}
